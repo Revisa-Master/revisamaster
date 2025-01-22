@@ -601,7 +601,7 @@ svg text {
   height: auto; /* Ajusta dinamicamente a altura */
   color: #333;         /* Letra branca para melhor contraste */
   background-color: #f0f0f0;
-  gap: 2rem;
+  gap: 0rem;
 }
 
 .container-content-5{
@@ -670,10 +670,23 @@ svg text {
   margin: 0 auto;
 }
 
+.svg-content-section-5{
+  position: absolute;
+}
+
+.svg-content-section-5 line{
+  stroke: #333;
+  stroke-width: 1;
+}
+
 @media (max-width: 768px) {
   .section-content-5 h2{
       font-size: 2rem;
       line-height: 1rem;
+  }
+
+  .svg-content-section-5{
+    display: none;
   }
 }
  
