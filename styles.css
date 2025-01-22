@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
 :root{
@@ -159,7 +160,7 @@ button:hover {
 
     #pagina-inicial{
    position: relative;   /* Para o vídeo ser posicionado absoluto dentro dela */
-   width: 100vw;
+   width: 100%;
    height: 100vh;        /* Ou 650px, se preferir algo fixo */
    margin: 0;            /* Remove margens extras */
    padding: 0;
@@ -170,7 +171,7 @@ button:hover {
    top: 0;
    left: 0;
    /* Faz o vídeo preencher toda a section */
-   width: 100vw;
+   width: 100%;
    height: 100vh;
    /* Corte/cubra proporcionalmente sem barras pretas */
    object-fit: cover;
@@ -388,20 +389,21 @@ button:hover {
  }
  .fourth-column{
    
-    margin-right: 0px;
+   margin-right: 0px;
    padding: 0rem;
  }
 
  .fourth-column .button{
     display: none;
     background-color: #f0f0f0;
+    align-content: center;
     font-size: 1rem;
-    margin-right: 2rem;
     color: #333;
     border: none;
+    border-radius: 0;
     padding: 1rem 3rem;
     cursor: pointer;
-    width: 15rem;
+    width: 20rem;
     height: 4rem;
     box-shadow: 2px 2px 4px #333;
     z-index: 2;
@@ -412,8 +414,8 @@ button:hover {
     display: flex;
     text-align: center;
     height: 10vh;
-    width: 100vw;
-    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+    width: 100%;
+    clip-path: polygon(0% 0%, 100% 0%, 50% calc(100% - 1px));
     background-color: #0c4467; /* Certifique-se de que é igual à seção anterior */
     margin: 0; /* Remove margens externas */
     padding: 0; /* Remove padding interno */
@@ -424,7 +426,7 @@ button:hover {
    .section-content-2 {
        flex-direction: column; /* Colunas empilhadas no mobile */
        justify-content: center; /* Centraliza verticalmente */
-       padding: 2rem; /* Espaçamento interno */
+       align-items: center; /* Centraliza horizontalmente */
        gap: 2rem; /* Espaçamento entre as colunas */
        height: auto; /* Altura dinâmica */
    }
@@ -456,7 +458,7 @@ button:hover {
 
 /*--------- FIM DOS ELEMENTOS DA SEGUNDA SESSÃO ------------*/
 
-/*--------- INCÍO DOS ELEMENTOS DA SEGUNDA SESSÃO ------------*/
+/*--------- INCÍO DOS ELEMENTOS DA TERCEIRA SESSÃO ------------*/
 
  .section-content-3 {
    margin-top: 4rem;
@@ -505,7 +507,7 @@ svg text {
 
 @media (max-width: 768px) {
     .section-content-3 h2{
-        font-size: 2rem;
+        font-size: 1.5rem;
         line-height: 1rem;
     }
 
@@ -528,56 +530,152 @@ svg text {
 }
 
  /*--------- FIM DOS ELEMENTOS DA TERCEIRA SESSÃO ------------*/
+ 
+ /*--------- INÍCIO DOS ELEMENTOS DA QUARTA SESSÃO ------------*/
 
  .section-content-4 {
-    position: relative;
+    display: flex;
+    flex-direction: column;
     color: #f0f0f0;         
-    padding-top: 20px; /* Adicionado padding correto para espaçamento */
-    text-align: center;  
+    padding-top: 2rem; /* Adicionado padding correto para espaçamento */
+    text-align: center;
+    align-items: center;  
     line-height: 1.5; /* Linha ajustada para boa legibilidade */
-    min-height: 50vh;
     width: 100%;
-    background-color: #0c4467;
+    height: 40vh; /* Ajusta dinamicamente a altura */ 
+    background-color: #1C7290;
     opacity: 1;
-    margin-top: 40px;
+    gap: 2rem;
  }  
 
  .section-content-4 h2 {
-   position: relative;
-   font-size: 40px;
-   margin-top: 60px;
-   line-height: 20px;
-   text-align: center;
-   justify-items: center;
+   font-size: 3rem;
    color:#f0f0f0;
-   gap: 40px;
  }
 
  .section-content-4 button{
-   background-color: #f0f0f0;
-   font-size: 18px;
-   margin-right: 20px;
-   margin-top: 60px;
-   color: #333;
-   border: none;
-   padding: 10px 30px;
-   cursor: pointer;
-   width: 240px;
-   height: 60px;
-   box-shadow: 2px 2px 4px #333;
-   z-index: 2;
- }
+  display: block;
+  font-size: 1rem;
+  color: #333;
+  background-color: #f0f0f0;
+  padding: 1rem 3rem;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  z-index: 2;
+  width: 20rem;
+  height: 3rem;
+  box-shadow: 2px 2px 4px #333;
+  }
+ 
  .section-content-4 button:hover {
-   background-color: #9CADC5;
-   font-size: 19px;
-   font-weight: bold;
-   box-shadow: 2px 2px 4px #333;
+    background-color: #9CADC5;
+    font-size: 1.1rem;
+    font-weight: bold;
+    box-shadow: 2px 2px 4px #333;
  }      
 
- /* Camada sobreposta (com 2 colunas) */
- 
+@media (max-width: 768px) {
+    .section-content-4 {
+        height: 40vh; /* Altura dinâmica */
+    }
+
+    .section-content-4 h2 {
+        font-size: 2rem; /* Ajuste proporcional */
+        line-height: 1rem;
+    }
+
+    .section-content-4 button {
+        display: block;
+    }
+}
+ /*--------- FIM DOS ELEMENTOS DA QUARTA SESSÃO ------------*/
 
 
+ .section-content-5 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: auto; /* Ajusta dinamicamente a altura */
+  color: #333;         /* Letra branca para melhor contraste */
+  background-color: #f0f0f0;
+  gap: 2rem;
+}
+
+.container-content-5{
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.container-content-5 .block{
+  margin:auto;
+  display: flex; /* Ativa Flexbox */
+  flex-direction: column; /* Alinha os elementos verticalmente */
+  justify-content: start; /* Centraliza verticalmente */
+  align-content: flex-start; /* Centraliza horizontalmente */
+  flex: 1 1 calc(33.333% - 2rem); /* Tamanho flexível */
+  box-sizing: border-box;
+  text-align: center;
+  background-color: white;
+  height: 70vh;
+  padding: 6rem;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.section-content-5 h2 {
+  font-size: 4rem;
+  line-height: 2rem;
+  text-align: center;              /* Espaçamento entre os elementos */
+}
+
+.container-content-5 h3 {
+  font-size: 8rem;
+  line-height: 8rem; /* Tamanho consistente com a altura */
+  text-align: start; /* Alinha texto */
+  font-weight: bold;
+  margin: 0; /* Remove margem padrão */
+  background: linear-gradient(90deg, #0c4467, #9CADC5, #1C7290);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.container-content-5 p {
+  font-size: 1rem;
+  line-height: 1rem;
+  text-align: center;              /* Espaçamento entre os elementos */
+}
+
+.section-content-5 .button{
+  display: block;
+  background-color: #0c4467;
+  font-size: 1rem;
+  color: #f0f0f0;
+  border: none;
+  padding: 1rem 1rem;
+  cursor: pointer;
+  width: 15rem;
+  height: 4rem;
+  box-shadow: 2px 2px 4px #333;
+  z-index: 2;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .section-content-5 h2{
+      font-size: 2rem;
+      line-height: 1rem;
+  }
+}
  
 /* ---------- FIM DOS ELEMENTOS DO BODY ---------- */
 
