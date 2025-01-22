@@ -9,6 +9,3 @@ O site servirá como um cartão de visita para que os clientes conheçam a empre
 ## Tecnologias Utilizadas
 - **Frontend:** HTML, CSS, JavaScript
 - **Backend:** Node.js, Express
-## Contato
-Para quaisquer perguntas ou dúvidas, entre em contato conosco em support@academicreviewingcompany.com.
-Obrigado pelo seu interesse no projeto do Site da Empresa de Revisão Acadêmica!
