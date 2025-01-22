@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
 :root{
@@ -7,16 +6,7 @@
     max-width: 100vw;
     max-height: 100vh;
 }
-/*texto para todos os svgs*/
-svg {
-    width: 60vw; /* Ocupará 100% do contêiner pai */
-    height: auto; /* Mantém a proporção original */
-}
 
-svg text {
-    font-family: var(--font-main), sans-serif;
-    font-size: 1rem;
-  }
 /* ---------- ELEMENTOS DO HEADER ---------- */
 /* Header padrão */
 header {
@@ -165,7 +155,9 @@ button:hover {
     background-color: #f0f0f0;
   }
 
-   #pagina-inicial{
+/*--------- INÍCIO ELEMENTOS DA PRIMEIRA SESSÃO ------------*/
+
+    #pagina-inicial{
    position: relative;   /* Para o vídeo ser posicionado absoluto dentro dela */
    width: 100vw;
    height: 100vh;        /* Ou 650px, se preferir algo fixo */
@@ -222,7 +214,7 @@ button:hover {
    z-index: 1;
    display: flex;          /* Fica acima do vídeo */
    color: #fff;         /* Letra branca para melhor contraste */
-   padding: 0 15px;     /* Espaçamento interno */
+   padding: 0 1.5rem;     /* Espaçamento interno */
    text-align: center;  /* Centraliza o texto */
    line-height: auto;
    background-color: #0c4467;
@@ -245,14 +237,24 @@ button:hover {
  }
  .left-col h1 {
    font-size: 5rem;
-   margin-top: 0px;
-   line-height: 20px;
+   margin-top: 0;
+   line-height: 2rem;
  }
 
  .left-col p {
-   font-size: 24px;
+   font-size: 1.5rem;
  }
 
+ .left-col .mobile-button{
+    display: none;
+    font-size: 2rem;
+    color: #f0f0f0;
+    border: none;
+    padding: 1.5rem 1.5rem;
+    cursor: pointer;
+    z-index: 2;
+    width: 10rem;
+ }
  /* Ajustes específicos da coluna direita */
 
  .right-col {
@@ -261,74 +263,118 @@ button:hover {
    align-items: center;    /* Centraliza os itens horizontalmente */
    justify-content: center; /* Centraliza verticalmente */
    text-align: left;     /* Centraliza o texto */
-   gap: 40px;
+   gap: 4rem;
    margin: 0 auto;         /* Centraliza a coluna */
  }
  .right-col h1 {
-   font-size: 72px;
-   margin-top: 2px;
-   line-height: 1.5;
+   margin-top: 0.2rem;
+   line-height: 1.5rem;
  }
 
  .right-col p {
-   font-size: 18px;
-   margin-top: 2px;
-   line-height: 1.5;
+   font-size: 1.2rem;
+   margin-top: 0.2rem;
+   line-height: 1.5rem;
    text-align: center;
-   margin-bottom: 40px;
-   margin-right: 40px;
-   margin-left: 40px;
-   text-shadow: 1px 1px 1px #333;
+   margin-bottom: 2rem;
+   margin-right: 2rem;
+   margin-left: 2rem;
+   text-shadow: 1px 1px 8px #333;
  }
 
  .right-col button {
    background-color: #f0f0f0;
-   font-size: 18px;
-   margin-right: 20px;
+   font-size: 1rem;
+   margin-right: 2rem;
    color: #333;
    border: none;
-   padding: 10px 30px;
+   padding: 1rem 3rem;
    cursor: pointer;
-   width: 240px;
-   height: 60px;
+   width: 15rem;
+   height: 4rem;
    box-shadow: 2px 2px 4px #333;
    z-index: 2;
  }
 
  .right-col button:hover {
    background-color: #9CADC5;
-   font-size: 19px;
+   font-size: 1.1rem;
    font-weight: bold;
    box-shadow: 2px 2px 4px #333;
  }
- .section-content-2 {
-   position: static;
-   display: flex;          /* Fica acima do vídeo */
-   color: #fff;         /* Letra branca para melhor contraste */
-   text-align: center;  /* Centraliza o texto */
-   line-height: auto;
-   height: 10vh;
-   width: 100%;
-   clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
-   background-color: #0c4467;
-   opacity: 1;
- }
+
+
+@media (max-width: 768px) {
+    .overlay {
+        flex-direction: column; /* Colunas empilhadas no mobile */
+        justify-content: center; /* Centraliza verticalmente */
+        padding: 2rem; /* Espaçamento interno */
+    }
+
+    #pagina-inicial{
+        position: relative;   /* Para o vídeo ser posicionado absoluto dentro dela */
+        width: 100vw;
+        height: 90vh;        /* Ou 650px, se preferir algo fixo */
+        margin: 0;            /* Remove margens extras */
+        padding: 0;
+      }
+
+    #pagina-inicial video{
+        height: 90vh;
+    }
+
+    .left-col, .right-col {
+        padding: 1rem; /* Espaçamento interno */
+    }
+
+    .left-col h1 {
+        font-size: 4rem; /* Ajuste proporcional */
+    }
+
+    .left-col p {
+        font-size: 1.2rem; /* Ajuste proporcional */
+    }
+
+    .right-col {
+        display: none;
+}
+
+   .left-col .mobile-button {
+        display: block;
+    }
+}
+/*--------- FIM DOS ELEMENTOS DA PRIMEIRA SESSÃO ------------*/
+
+/*--------- INCÍO DOS ELEMENTOS DA SEGUNDA SESSÃO ------------*/
+
+.section-content-2 {
+    position: relative;
+    height: 40vh; /* Ajusta dinamicamente a altura */
+    z-index: 1;
+    display: flex;
+    color: #fff;
+    padding: 0; /* Remove qualquer padding interno */
+    text-align: center;
+    background-color: #0c4467; /* Certifique-se de que a cor é consistente */
+    line-height: normal;
+    margin: 0; /* Remove margens externas */
+}
 
  .section-content-2 h2 {
-   font-size: 40px;
+   font-size: 2rem;
    margin-top: 0px;
-   line-height: 20px;
+   line-height: 2rem;
  }
 
  .first-column, .second-column, .third-column, .fourth-column {
    flex: 1; /* Faz cada uma ocupar 1/4 do espaço */
-   padding: 40px; /* Espaço interno, se quiser */
+   padding: 2rem; /* Espaço interno, se quiser */
    display: flex;
    flex-direction: column; /* Alinha itens verticalmente */
-   align-items: left;    /* Centraliza os itens horizontalmente */
+   align-items: center;    /* Centraliza os itens horizontalmente */
    justify-content: center; /* Centraliza verticalmente */
    text-align: center;     /* Centraliza o texto */
-   gap: 0px;              /* Espaçamento entre os elementos */
+   gap: 0rem;              /* Espaçamento entre os elementos */
    margin-right: 0 auto;         /* Centraliza a coluna */
  }
  .first-column {
@@ -341,14 +387,82 @@ button:hover {
    border-right: 1px solid #f0f0f0;
  }
  .fourth-column{
-   margin-right: 0px;
+   
+    margin-right: 0px;
+   padding: 0rem;
  }
- 
+
+ .fourth-column .button{
+    display: none;
+    background-color: #f0f0f0;
+    font-size: 1rem;
+    margin-right: 2rem;
+    color: #333;
+    border: none;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    width: 15rem;
+    height: 4rem;
+    box-shadow: 2px 2px 4px #333;
+    z-index: 2;
+ }
+
+ .section-content-2-polygon {
+    position: relative;
+    display: flex;
+    text-align: center;
+    height: 10vh;
+    width: 100vw;
+    clip-path: polygon(0% 0%, 100% 0%, 50% 100%);
+    background-color: #0c4467; /* Certifique-se de que é igual à seção anterior */
+    margin: 0; /* Remove margens externas */
+    padding: 0; /* Remove padding interno */
+    border-top: none; /* Garante que não há borda no topo */
+}
+
+ @media (max-width: 768px) {
+   .section-content-2 {
+       flex-direction: column; /* Colunas empilhadas no mobile */
+       justify-content: center; /* Centraliza verticalmente */
+       padding: 2rem; /* Espaçamento interno */
+       gap: 2rem; /* Espaçamento entre as colunas */
+       height: auto; /* Altura dinâmica */
+   }
+
+   .first-column, .second-column, .third-column {
+       padding: 1rem; /* Espaçamento interno */
+       border-right: none;
+       border-bottom: 1px solid #f0f0f0;
+   }
+
+   .fourth-column {
+       padding: 0rem; /* Espaçamento interno */
+       border-right: none;
+   }
+
+   .fourth-column p{
+            margin-bottom: 2rem;
+   }
+
+   .fourth-column .button {
+       display: block;
+   }
+
+   .first-column h2, .second-column h2, .third-column h2, .fourth-column h2 {
+       font-size: 1.5rem; /* Ajuste proporcional */
+       line-height: 0.5rem;
+   }
+ }
+
+/*--------- FIM DOS ELEMENTOS DA SEGUNDA SESSÃO ------------*/
+
+/*--------- INCÍO DOS ELEMENTOS DA SEGUNDA SESSÃO ------------*/
+
  .section-content-3 {
-   margin-top: 40px;
+   margin-top: 4rem;
    margin-bottom: 0px;
    color: #333;         /* Letra branca para melhor contraste */
-   padding: 0 15px;     /* Espaçamento interno */
+   padding: 0 1.5rem;     /* Espaçamento interno */
    text-align: center;  /* Centraliza o texto */
    line-height: auto;
    background-color: #f0f0f0;
@@ -358,21 +472,63 @@ button:hover {
  }
 
  .section-content-3 h2 {
-   font-size: 40px;
+   font-size: 4rem;
    margin-top: 0px;
-   line-height: 20px;
+   line-height: 2rem;
    text-align: center;
  }
 
  .section-content-3 h3 {
-   font-size: 60px;
-   margin-top: 40px;
-   line-height: 20px;
-   text-align: center;
-   color: #ff4040;
-
- }
+    font-size: 5rem;
+    text-align: center;
+    color: #ff4040;
  
+  }
+
+ /*texto para todos os svgs*/
+.svg.desktop{
+    width: 60vw; /* Ocupará 100% do contêiner pai */
+    height: auto; /* Mantém a proporção original */
+    margin-bottom: 0px;
+}
+
+svg text {
+    font-family: var(--font-main), sans-serif;
+    font-size: 1rem;
+  }
+
+.svg.mobile{
+    display: none;
+    width: 90vw; /* Ocupará 100% do contêiner pai */
+    height: auto; /* Mantém a proporção original */
+}
+
+@media (max-width: 768px) {
+    .section-content-3 h2{
+        font-size: 2rem;
+        line-height: 1rem;
+    }
+
+    .section-content-3 h3 {
+        margin-top: 0px;
+        font-size: 3rem;
+        line-height: 1rem;
+    }
+    .svg.desktop {
+    display: none;
+    }
+    
+    .svg.mobile{
+    display: block;
+    }
+
+    svg text {
+        font-size: 2rem;
+    }
+}
+
+ /*--------- FIM DOS ELEMENTOS DA TERCEIRA SESSÃO ------------*/
+
  .section-content-4 {
     position: relative;
     color: #f0f0f0;         
@@ -419,6 +575,9 @@ button:hover {
  }      
 
  /* Camada sobreposta (com 2 colunas) */
+ 
+
+
  
 /* ---------- FIM DOS ELEMENTOS DO BODY ---------- */
 
