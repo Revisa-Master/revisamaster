@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+
+#pagina-inicial{
+    position: relative;   /* Para o vídeo ser posicionado absoluto dentro dela */
+    width: 100%;
+    height: 100vh;        /* Ou 650px, se preferir algo fixo */
+    margin: 0;            /* Remove margens extras */
+    padding: 0;
+  }
+ 
+  #pagina-inicial video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* Faz o vídeo preencher toda a section */
+    width: 100%;
+    height: 100vh;
+    /* Corte/cubra proporcionalmente sem barras pretas */
+    object-fit: cover;
+    z-index: -1; /* Fica atrás do texto */
+    opacity: 0.8;
+  }
+ 
+  .hero-section {
+    position: relative;  /* Para que o vídeo seja posicionado dentro */
+    width: 100vw;
+    height: 100vh;       /* Tela cheia, se quiser */
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    background-color: #0c4467;
+    opacity: 0.8;
+  }
+ 
+  /* Vídeo em posição absoluta ao fundo */
+  .hero-section video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;         /* Fica atrás do conteúdo */
+    background-color: #0c4467;
+  }
+ 
+  .overlay {
+    position: relative;
+    z-index: 1;            /* Fica acima do vídeo */
+    display: flex;         /* Duas colunas lado a lado */
+    justify-content: center; /* Se quiser espaçar bem as colunas */
+    align-items: top;   /* Alinha verticalmente no centro */
+    height: 100vh;          /* Ocupa toda a altura da seção */
+    padding: 0 2rem;       /* Espaçamento interno lateral */
+    color: #fff;           /* Texto branco para melhor contraste */
+  }
+ 
+  .section-content-1 {
+    position: relative;
+    z-index: 1;
+    display: flex;          /* Fica acima do vídeo */
+    color: #fff;         /* Letra branca para melhor contraste */
+    padding: 0 1.5rem;     /* Espaçamento interno */
+    text-align: center;  /* Centraliza o texto */
+    line-height: auto;
+    background-color: #0c4467;
+  }
+  /* Cada coluna ocupando metade do espaço (ou como quiser) */
+  .left-col, .right-col {
+    flex: 1; /* Faz cada uma ocupar metade do espaço */
+    padding: 1rem; /* Espaço interno, se quiser */
+  }
+ 
+  /* Ajustes específicos da coluna esquerda */
+  
+  .left-col {
+    display: flex;
+    flex-direction: column; /* Alinha itens verticalmente */
+    align-items: center;    /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    text-align: center;     /* Centraliza o texto */
+    gap: 0;              /* Espaçamento entre os elementos */
+  }
+  .left-col h1 {
+    font-size: 5rem;
+    margin-top: 0;
+    line-height: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+  }
+ 
+  .left-col p {
+    font-size: 1.5rem;
+    font-family: var(--font-main), sans-serif;
+  }
+ 
+  .left-col .mobile-button{
+     display: none;
+     font-size: 2rem;
+     color: #f0f0f0;
+     border: none;
+     padding: 1.5rem 1.5rem;
+     cursor: pointer;
+     z-index: 2;
+     width: 10rem;
+  }
+  /* Ajustes específicos da coluna direita */
+ 
+  .right-col {
+    display: flex;
+    flex-direction: column; /* Alinha itens verticalmente */
+    align-items: center;    /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    text-align: left;     /* Centraliza o texto */
+    gap: 4rem;
+    margin: 0 auto;         /* Centraliza a coluna */
+  }
+  .right-col h1 {
+    margin-top: 0.2rem;
+    line-height: 1.5rem;
+  }
+ 
+  .right-col p {
+    font-size: 1.2rem;
+    margin-top: 0.2rem;
+    line-height: 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    text-shadow: 1px 1px 8px #333;
+  }
+ 
+  .right-col button {
+    background-color: #f0f0f0;
+    font-size: 1rem;
+    margin-right: 2rem;
+    color: #333;
+    border: none;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    width: 15rem;
+    height: 4rem;
+    box-shadow: 2px 2px 4px #333;
+    z-index: 2;
+  }
+ 
+  .right-col button:hover {
+    background-color: #9CADC5;
+    font-size: 1.1rem;
+    font-weight: bold;
+    box-shadow: 2px 2px 4px #333;
+  }
+ 
+ 
+ @media (max-width: 768px) {
+     .overlay {
+         flex-direction: column; /* Colunas empilhadas no mobile */
+         justify-content: center; /* Centraliza verticalmente */
+         padding: 2rem; /* Espaçamento interno */
+     }
+ 
+     #pagina-inicial{
+         position: relative;   /* Para o vídeo ser posicionado absoluto dentro dela */
+         width: 100vw;
+         height: 90vh;        /* Ou 650px, se preferir algo fixo */
+         margin: 0;            /* Remove margens extras */
+         padding: 0;
+       }
+ 
+     #pagina-inicial video{
+         height: 90vh;
+     }
+ 
+     .left-col, .right-col {
+         padding: 1rem; /* Espaçamento interno */
+     }
+ 
+     .left-col h1 {
+         font-size: 4rem; /* Ajuste proporcional */
+     }
+ 
+     .left-col p {
+         font-size: 1.2rem; /* Ajuste proporcional */
+     }
+ 
+     .right-col {
+         display: none;
+ }
+ 
+    .left-col .mobile-button {
+         display: block;
+     }
+ }

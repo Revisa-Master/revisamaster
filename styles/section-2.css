@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+.section-content-2 {
+    position: relative;
+    height: 40vh; /* Ajusta dinamicamente a altura */
+    z-index: 1;
+    display: flex;
+    color: #fff;
+    padding: 0; /* Remove qualquer padding interno */
+    text-align: center;
+    background-color: #0c4467; /* Certifique-se de que a cor é consistente */
+    line-height: normal;
+    margin: 0; /* Remove margens externas */
+}
+
+ .section-content-2 h2 {
+   font-size: 2rem;
+   margin-top: 0px;
+   line-height: 2rem;
+ }
+
+ .first-column, .second-column, .third-column, .fourth-column {
+   flex: 1; /* Faz cada uma ocupar 1/4 do espaço */
+   padding: 2rem; /* Espaço interno, se quiser */
+   display: flex;
+   flex-direction: column; /* Alinha itens verticalmente */
+   align-items: center;    /* Centraliza os itens horizontalmente */
+   justify-content: center; /* Centraliza verticalmente */
+   text-align: center;     /* Centraliza o texto */
+   gap: 0rem;              /* Espaçamento entre os elementos */
+   margin-right: 0 auto;         /* Centraliza a coluna */
+ }
+ .first-column {
+   border-right: 1px solid #f0f0f0;
+ }
+ .second-column {
+   border-right: 1px solid #f0f0f0;
+ }
+ .third-column {
+   border-right: 1px solid #f0f0f0;
+ }
+ .fourth-column{
+   
+   margin-right: 0px;
+   padding: 0rem;
+ }
+
+ .fourth-column .button{
+    display: none;
+    background-color: #f0f0f0;
+    align-content: center;
+    font-size: 1rem;
+    color: #333;
+    border: none;
+    border-radius: 0;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    width: 20rem;
+    height: 4rem;
+    box-shadow: 2px 2px 4px #333;
+    z-index: 2;
+ }
+
+ .section-content-2-polygon {
+    position: relative;
+    display: flex;
+    text-align: center;
+    height: 10vh;
+    width: 100%;
+    clip-path: polygon(0% 0%, 100% 0%, 50% calc(100% - 1px));
+    background-color: #0c4467; /* Certifique-se de que é igual à seção anterior */
+    margin: 0; /* Remove margens externas */
+    padding: 0; /* Remove padding interno */
+    border-top: none; /* Garante que não há borda no topo */
+}
+
+ @media (max-width: 768px) {
+   .section-content-2 {
+       flex-direction: column; /* Colunas empilhadas no mobile */
+       justify-content: center; /* Centraliza verticalmente */
+       align-items: center; /* Centraliza horizontalmente */
+       gap: 2rem; /* Espaçamento entre as colunas */
+       height: auto; /* Altura dinâmica */
+   }
+
+   .first-column, .second-column, .third-column {
+       padding: 1rem; /* Espaçamento interno */
+       border-right: none;
+       border-bottom: 1px solid #f0f0f0;
+   }
+
+   .fourth-column {
+       padding: 0rem; /* Espaçamento interno */
+       border-right: none;
+   }
+
+   .fourth-column p{
+            margin-bottom: 2rem;
+   }
+
+   .fourth-column .button {
+       display: block;
+   }
+
+   .first-column h2, .second-column h2, .third-column h2, .fourth-column h2 {
+       font-size: 1.5rem; /* Ajuste proporcional */
+       line-height: 0.5rem;
+   }
+ }
