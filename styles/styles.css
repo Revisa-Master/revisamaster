@@ -10,67 +10,61 @@
 
 /* ---------- ELEMENTOS DO HEADER ---------- */
 /* Header padrão */
-header {
-    display: flex;
-    background-color: #f0f0f0;
-    color: #333;
-    padding: 1rem 2rem; /* Reduzido para responsividade */
-    height: auto; /* Permitir altura dinâmica */
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* Quebra de linha */
+.menu-inicial {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  list-style-type: none;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
 }
 
-/* Logo */
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 1rem; /* Espaçamento entre logo e botão toggle */
+.cabecalho{
+  display: grid;
+  align-items: center;
+  width: 100%;
+  height: 20vh;
+  background-color: #f0f0f0;
 }
 
-.logo img {
-    width: 5rem; /* Ajuste proporcional */
-    height: auto;
+
+.cabecalho .logo img{
+  width: 6rem;
 }
 
-/* Navegação */
-nav {
-    display: flex;
-    font-size: 1rem; /* Ajuste para mobile */
-    gap: 4rem; /* Espaçamento entre links */
-    flex: 1; /* Ocupa todo o espaço restante */
-    justify-content: center;
-    align-items: center;
-    margin: 0;
+.cabecalho .links-outras-paginas a {
+  display: grid;
+  justify-content: space-around;
+  text-align: center;
+  font-size: 1rem;
+  font-family: var(--font-main), sans-serif;
+  color: #333;
+  text-decoration: none;
 }
 
-nav a {
-    color: #333;
-    text-decoration: none;
-    font-size: 1rem;
+.cabecalho .links-outras-paginas a:hover {
+  color: #1C7290;
 }
 
-nav a:hover {
-    color: #1C7290;
+.cabecalho .button__nav {
+  background-color: #1C7290;
+  color: #fff;
+  border-radius: 8px;
+  text-align: center;;
+  font-size: 1rem;
+  font-family: var(--font-main), sans-serif;
+  cursor: pointer;
+  height: 2rem;
+  width: 10rem;
+  padding-top: 1rem;
+  box-shadow: 1px 1px 2px #0c4467;
 }
 
-/* Botão */
-
-.button {
-    background-color: #1C7290;
-    color: #f0f0f0;
-    font-size: 1rem;
-    border: none;
-    padding: 0.5rem 1rem; /* Reduzido para mobile */
-    cursor: pointer;
-    border-radius: 0.25rem;
-    margin: auto;
-}
-
-.button:hover {
-    background-color: #132741;
-    font-size: 1.1rem;
-    font-weight: bold;
+.cabecalho .button__nav:hover {
+  background-color: #1C7290;
+  font-size: 1.1rem;
+  font-weight: bold;
+  -webkit-transition: 0.2s;
 }
 
 .dropdown button {
@@ -116,7 +110,7 @@ nav a:hover {
         padding: 1rem;
     }
 
-    .logo {
+    .cabecalho .logo img {
         flex: 1; /* Ocupa espaço proporcional */
     }
 

@@ -7,7 +7,7 @@
   <title>Revisa Master | serviço de orientação acadêmica</title>
   <meta name="description" content="Na Revisa Master, somos especialistas em oferecer serviços de orientação acadêmica e todos os tipos de trabalho acadêmico, como teses, TCC, dissertações...">
   <link rel="icon" href="/favicon.png" type="image/png">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./styles/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
@@ -17,40 +17,38 @@
 <!--INÍCIO DA PÁGINA INICIAL-->
 
 <body>
-  <header>
-    <!-- Logo à esquerda -->
-    <div class="logo">
-      <img
-        src="./images/LOGO_OFICIAL-removebg-preview.avif"
-        alt="Revisa Master">
-    </div>
-    <!-- Nav ao centro -->
-        <nav>
-            <a href="pagina-inicial">Página inicial</a>
-            <a href="nossos-servicos">Nossos serviços</a>
-            <a href="sobre-nos">Sobre nós</a>
-            <a href="duvidas">Dúvidas</a>
-          </nav>
-          <div class="dropdown">
+  <header class="cabecalho">
+    <nav class="cabecalho__nav">
+        <ul class="menu-inicial">
+            <li>
+                <h1 class="logo">
+                    <img src="./images/logo.avif" alt="Logo da empresa">
+                </h1>
+            </li>
+            <li class="links-outras-paginas"><a href="#">Página inicial</a></li>
+            <li class="links-outras-paginas"><a href="#">Nossos serviços</a></li>
+            <li class="links-outras-paginas"><a href="#">Sobre nós</a></li>
+            <li class="links-outras-paginas"><a href="#">Dúvidas</a></li>
+            <li class="button__nav">Fale conosco</li>
+        </ul>
+    </nav>
+          <ul class="dropdown">
             <button>☰</button>
-              <div class="content">
+              <li class="content">
                 <a href="pagina-inicial">Página inicial</a>
                 <a href="nossos-servicos">Nossos serviços</a>
                 <a href="sobre-nos">Sobre nós</a>
                 <a href="duvidas">Dúvidas</a>
-              </div>
-          </div>
+              </li>
+            </ul>
           <!-- Botão de contato à direita -->
-      <div class="button">
-        Fale conosco      
-      </div>
 
   </header>
 
     <section id="pagina-inicial" class="hero-section">
       <div>
         <video autoplay muted loop playsinline id="myVideo">
-          <source src="./Videos\Video_entrada.mp4"
+          <source src="./videos\Video_entrada.mp4"
           type="video/mp4">
           </source>
         </video>
