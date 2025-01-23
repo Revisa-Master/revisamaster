@@ -773,12 +773,100 @@ svg text {
 }
 /* ---------- FIM DOS ELEMENTOS DO BODY ---------- */
 
+footer {
+  width: auto;
+  height: 50vh;
+  padding-left: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  background: #9dadc6;
+  color: #000000;
+}
 
- footer {
-   display: flex;
-   align-items: center;
-   justify-content: center; /* footer centralizado */
-   height: 50px;
-   background-color: #f0f0f0;
-   color: #333;
- }
+.footer-menu li {
+  margin-bottom: 1rem;
+}
+
+.footer-menu ul {
+  list-style-type: none;
+}
+
+.footer-menu a {
+  text-decoration: none;
+  color: black;
+}
+
+.footer-menu a:hover {
+  color: #e9e9fa;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  padding-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.footer-contact p {
+  text-align: center;
+}
+
+.footer-contact strong {
+  color: #323335;
+}
+
+.social-media a {
+  margin-left: 0.5rem;
+  text-decoration: none;
+}
+
+.social-media a img {
+  width: 2.5rem;
+  height: auto;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-logo h3 {
+  color: #323335;
+}
+
+.footer-logo img {
+  width: 5rem;
+  height: auto;
+}
+
+.footer-logo p {
+  font-size: 1rem;
+  padding-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    justify-items: center;
+    gap: 1rem;
+    width: auto;
+    height: 100vh;
+    padding: 0.5rem;
+  }
+
+  .footer-menu ul {
+    text-align: center;
+    margin-right: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .footer-contact {
+    gap: 0;
+  }
+}
