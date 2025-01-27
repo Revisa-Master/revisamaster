@@ -21,13 +21,13 @@
 
  .first-column, .second-column, .third-column, .fourth-column {
    flex: 1; /* Faz cada uma ocupar 1/4 do espaço */
-   padding: 2rem; /* Espaço interno, se quiser */
+   padding: 2rem rem; /* Espaço interno, se quiser */
    display: flex;
    flex-direction: column; /* Alinha itens verticalmente */
    align-items: center;    /* Centraliza os itens horizontalmente */
    justify-content: center; /* Centraliza verticalmente */
    text-align: center;     /* Centraliza o texto */
-   gap: 0rem;              /* Espaçamento entre os elementos */
+   gap: 2rem;              /* Espaçamento entre os elementos */
    margin-right: 0 auto;         /* Centraliza a coluna */
  }
  .first-column {

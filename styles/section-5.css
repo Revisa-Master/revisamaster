@@ -44,7 +44,8 @@
     font-size: 4rem;
     line-height: 2rem;
     text-align: center;              /* Espaçamento entre os elementos */
-  }
+    padding: 3rem 0;
+}
   
   .container-content-5 h3 {
     font-size: 8rem;

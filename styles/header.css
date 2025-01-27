@@ -1,69 +1,86 @@
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
 :root{
-    --font-main: 'Questrial', sans-serif;
-    font-size: 100%;
-    max-width: 100vw;
-    max-height: 100vh;
+    --font-main: 'Questrial', 'sans-serif';
+    --font-title: 'Times New Roman', 'serif';
+    --color-font: #333;
+    --color-font-variation: #f0f0f0;
+    
+    --color-primary: #0c4467;
+    --color-secondary: #1C7290;
+    --color-background: #f0f0f0;
 }
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 /* ---------- ELEMENTOS DO HEADER ---------- */
 /* Header padrão */
-.menu-inicial {
-  display: grid;
-  grid-template-columns: auto auto auto auto auto auto;
-  list-style-type: none;
-  align-items: center;
-  justify-content: space-around;
-  height: 100%;
-}
 
 .cabecalho{
-  display: grid;
-  align-items: center;
-  width: 100%;
-  height: 20vh;
+  display: flex;
+  justify-content: center;
+  height: 20%;
   background-color: #f0f0f0;
+  width: 100%;
+  margin: 0 auto; /* Centraliza o cabeçalho */
 }
 
+.cabecalho__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    gap: 10rem
+  }
 
-.cabecalho .logo img{
-  width: 6rem;
+
+.cabecalho__nav__logo {
+  padding: 1rem 2rem;
 }
 
-.cabecalho .links-outras-paginas a {
-  display: grid;
-  justify-content: space-around;
-  text-align: center;
+.cabecalho__nav__links{
+    display: flex;
+    flex: 1;
+    padding: auto;
+    gap: 2rem;
+}
+
+.cabecalho__nav__links a {  
   font-size: 1rem;
   font-family: var(--font-main), sans-serif;
   color: #333;
   text-decoration: none;
 }
 
-.cabecalho .links-outras-paginas a:hover {
+.cabecalho__nav__links a:hover {
   color: #1C7290;
 }
 
-.cabecalho .button__nav {
-  background-color: #1C7290;
-  color: #fff;
-  border-radius: 8px;
-  text-align: center;;
-  font-size: 1rem;
-  font-family: var(--font-main), sans-serif;
-  cursor: pointer;
-  height: 2rem;
-  width: 10rem;
-  padding-top: 1rem;
-  box-shadow: 1px 1px 2px #0c4467;
+.cabecalho__nav__button{
+    padding: 1rem 2rem;
 }
 
-.cabecalho .button__nav:hover {
+.cabecalho__nav__button a {
+  color: #fff;
+  background-color: var(--color-primary);
+  border-radius: 8px;
+  text-align: center;
+  font-size: 1rem;
+  font-family: var(--font-main);
+  cursor: pointer;
+  box-shadow: 1px 1px 2px var(--color-primary);
+  padding: 1rem 3rem;
+  display: inline-block;
+  
+}
+
+.cabecalho__nav__button a:hover {
   background-color: #1C7290;
   font-size: 1.1rem;
   font-weight: bold;
-  -webkit-transition: 0.2s;
 }
 
 .dropdown button {

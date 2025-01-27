@@ -26,32 +26,34 @@
 
 <body>
   <header class="cabecalho">
-    <nav class="cabecalho__nav">
-        <ul class="menu-inicial">
-            <li>
-                <h1 class="logo">
-                    <img src="./images/logo.avif" alt="Logo da empresa">
-                </h1>
-            </li>
-            <li class="links-outras-paginas"><a href="#">Página inicial</a></li>
-            <li class="links-outras-paginas"><a href="#">Nossos serviços</a></li>
-            <li class="links-outras-paginas"><a href="#">Sobre nós</a></li>
-            <li class="links-outras-paginas"><a href="#">Dúvidas</a></li>
-            <li class="button__nav">Fale conosco</li>
-        </ul>
+    <nav class="cabecalho__nav">            
+        <div class="cabecalho__nav__logo">
+            <img src="./images/logo.avif" alt="Logo da empresa">
+        </div>
+            
+        <div class="cabecalho__nav__links">
+            <li><a href="index.html">Página inicial</a></li>
+            <li><a href="#">Nossos serviços</a></li>
+            <li><a href="about.html">Sobre nós</a></li>
+            <li><a href="#">Dúvidas</a></li>
+        </div>
+            
+        <div class="cabecalho__nav__button">
+            <a>Fale conosco</a>
+        </div>    
+                
     </nav>
-          <ul class="dropdown">
-            <button>☰</button>
-              <li class="content">
-                <a href="pagina-inicial">Página inicial</a>
-                <a href="nossos-servicos">Nossos serviços</a>
-                <a href="sobre-nos">Sobre nós</a>
-                <a href="duvidas">Dúvidas</a>
-              </li>
-            </ul>
-          <!-- Botão de contato à direita -->
-
-  </header>
+        
+            <ul class="dropdown">
+                <button>☰</button>
+                <li class="content">
+                    <a href="pagina-inicial">Página inicial</a>
+                    <a href="nossos-servicos">Nossos serviços</a>
+                    <a href="sobre-nos">Sobre nós</a>
+                    <a href="duvidas">Dúvidas</a>
+                </li>
+                </ul>
+    </header>
 
     <section id="pagina-inicial" class="hero-section">
       <div>
@@ -340,7 +342,7 @@
     <!-- Logo da empresa -->
     <div class="footer-logo">
       <h3>Revisa Master</h3>
-      <img src="./images/LOGO_OFICIAL-removebg-preview.avif" alt="Logo da Revisa Master" />
+      <img src="./images/logo.avif" alt="Logo da Revisa Master" />
       <p>CNPJ: 48.693.442/0001-97</p>
     </div>
   </footer>
