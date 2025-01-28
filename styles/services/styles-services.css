@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+/* =========================== */
+/* Reset e estilos globais */
+/* =========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --font-main: 'Questrial', sans-serif;
+}
+
+body {
+    color: #333;
+    background-color: #f0f0f0;
+    font-family: var(--font-main), sans-serif;
+}
+  
+
