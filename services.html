@@ -8,17 +8,46 @@
       name="description"
       content="Na Revisa Master, somos especialistas em oferecer serviços de orientação acadêmica e todos os tipos de trabalho acadêmico, como teses, TCC, dissertações..."
     />
-    <link
-      rel="icon"
-      href="./images/logo.avif"
-      type="image/png"
-    />
+    <link rel="icon" href="./images/logo.avif" type="image/png" />
     <link rel="stylesheet" href="./styles/services/styles-services.css" />
+    <link rel="stylesheet" href="./styles/header.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
 
   <body>
-    
+    <header class="cabecalho">
+      <nav class="cabecalho__nav" aria-label="Menu de navegação principal" role="navigation" >
+        <div class="cabecalho__nav__logo">
+            <img src="./images/logo.avif" alt="Logo da empresa Revisa Master" />
+        </div>
+
+        <ul class="cabecalho__nav__menu">
+            <li><a href="./index.html">Página inicial</a></li>
+            <li><a href="./services.html">Nossos serviços</a></li>
+            <li><a href="./about.html">Sobre nós</a></li>
+            <li><a href="/">Dúvidas</a></li>
+            <li><a href="/">Blog</a></li>
+        </ul>
+
+        <div class="cabecalho__nav__button">
+            <button class="contact-button">Fale conosco</button>
+        </div>
+
+        <div class="cabecalho__nav__dropdown">
+            <button>☰</button>
+            <div class="content">
+              <a href="./index.html">Página inicial</a>
+              <a href="./services.html">Nossos serviços</a>
+              <a href="./about.html">Sobre nós</a>
+              <a href="/">Dúvidas</a>
+              <a href="/">Blog</a>
+            </div>
+          </div>
+      </nav>
+    </header>
+
+    <script src="./scripts/menu-toggle.js"></script>
+    <script src="./scripts/letra-svg.js"></script>
   </body>
 </html>
