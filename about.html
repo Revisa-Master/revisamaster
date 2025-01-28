@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=, initial-scale=1.0">
     <link rel="icon" href="./images/logo.avif" type="image/png">
     <link rel="stylesheet" href="./styles/header.css">
     <link rel="stylesheet" href="./styles/about/styles-about.css">
@@ -10,39 +10,39 @@
     <title>Document</title>
 </head>
 <body>
-<header class="cabecalho">
-    <nav class="cabecalho__nav">            
-        <div class="cabecalho__nav__logo">
-            <a href="index.html"><img src="./images/logo.avif" alt="Logo da empresa"></a>
-            
+  <header class="cabecalho">
+    <nav class="cabecalho__nav" aria-label="Menu de navegação principal" role="navigation" >
+      <div class="cabecalho__nav__logo">
+          <img src="./images/logo.avif" alt="Logo da empresa Revisa Master" />
+      </div>
+
+      <ul class="cabecalho__nav__menu">
+          <li><a href="./index.html">Página inicial</a></li>
+          <li><a href="./services.html">Nossos serviços</a></li>
+          <li><a href="./about.html">Sobre nós</a></li>
+          <li><a href="/">Dúvidas</a></li>
+          <li><a href="/">Blog</a></li>
+      </ul>
+
+      <div class="cabecalho__nav__button">
+          <button class="contact-button">Fale conosco</button>
+      </div>
+
+      <div class="cabecalho__nav__dropdown">
+          <button>☰</button>
+          <div class="content">
+            <a href="./index.html">Página inicial</a>
+            <a href="./services.html">Nossos serviços</a>
+            <a href="./about.html">Sobre nós</a>
+            <a href="/">Dúvidas</a>
+            <a href="/">Blog</a>
+          </div>
         </div>
-            
-        <div class="cabecalho__nav__links">
-            <li><a href="index.html">Página inicial</a></li>
-            <li><a href="services.html">Nossos serviços</a></li>
-            <li><a href="about.html">Sobre nós</a></li>
-            <li><a href="#">Dúvidas</a></li>
-        </div>
-            
-        <div class="cabecalho__nav__button">
-            <a>Fale conosco</a>
-        </div>    
-                
     </nav>
-        
-            <ul class="dropdown">
-                <button>☰</button>
-                <li class="content">
-                    <a href="pagina-inicial">Página inicial</a>
-                    <a href="nossos-servicos">Nossos serviços</a>
-                    <a href="sobre-nos">Sobre nós</a>
-                    <a href="duvidas">Dúvidas</a>
-                </li>
-                </ul>
-    </header>
+  </header>
 
     <main>
-        <section class="hero-section-about hidden">
+        <section class="hero-section-about">
             <video class="hero-section-about__video" autoplay loop muted>
                 <source src="./videos/video-about.mp4" type="video/mp4">
             </video>
@@ -53,14 +53,14 @@
 
         </section>
 
-        <section class="content-about hidden">
+        <section class="content-about">
 
             <h1>Missão</h1>
             <p>Nossa missão é transformar a vida acadêmica de alunos por todo o país. Conosco, 
             não há limites do quanto o seu trabalho pode melhorar.</p>
         </section>
 
-        <section class="content-about hidden">
+        <section class="content-about">
 
             <h1>Visão</h1>
             <p>Queremos ser a referência principal para estudantes e profissionais em todo o Brasil, oferecendo 
@@ -68,7 +68,7 @@
         
         </section>
 
-        <section class="content-about hidden">
+        <section class="content-about">
 
             <h1>História</h1>
             <p>
@@ -123,5 +123,4 @@
       </div>
     </footer>
 </body>
-<script src="scripts.js"></script>
 </html>
