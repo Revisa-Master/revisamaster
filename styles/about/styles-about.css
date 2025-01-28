@@ -1,0 +1,105 @@
+root {
+    --font-main: 'Questrial', 'sans-serif';
+    --font-title: 'Times New Roman', 'serif';
+    --color-font: #333;
+    --color-font-variation: #f0f0f0;
+    
+    --color-primary: #0c4467;
+    --color-secondary: #1C7290;
+    --color-background: #f0f0f0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    background-color: var(--color-background);
+}
+
+.hero-section-about {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+    background-color: var(--color-primary);
+}
+
+.hero-section-about__video {
+    position: absolute;
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.6;
+}
+
+.hero-section-about__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    color: var(--color-font-variation);
+    z-index: 1;
+}
+
+.hero-section-about__content h1 {
+    font-size: 5rem;
+    font-family: var(--font-title);
+}
+
+.content-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 4rem;
+    width: 100%;
+    color: var(--color-font);
+    background-color: var(--color-background);
+}
+
+.content-about h1 {
+    text-transform: uppercase;
+    font-size: 8.5rem;
+    font-family: var(--font-title);
+    color: var(--color-font);
+    background: linear-gradient(10deg, #333, #0c4467, #1C7290);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.content-about p {
+    font-size: 1.5rem;
+    font-family: var(--font-main), sans-serif;
+    padding: 2rem 20rem;
+}
+
+.content-about p strong {
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+/* main: Estilizar o elemento <main>.
+.hero-section-about: Estilizar a seção principal de introdução.
+.hero-section-about video: Estilizar o elemento <video> dentro da seção.
+.hero-section-about source: Estilizar o elemento <source> dentro do vídeo.
+.hero-section-about__content: Estilizar o contêiner do conteúdo dentro da seção "hero".
+.hero-section-about__content h1: Estilizar o título <h1> dentro do contêiner de conteúdo.
+.content-about: Estilizar todas as seções com a classe "content-about".
+.content-about h1: Estilizar os títulos <h1> dentro das seções "content-about".
+.content-about p: Estilizar os parágrafos <p> dentro das seções "content-about".
+.content-about p strong: Estilizar o texto em negrito <strong> dentro dos parágrafos nas seções "content-about". */
