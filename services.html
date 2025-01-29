@@ -8,17 +8,217 @@
       name="description"
       content="Na Revisa Master, somos especialistas em oferecer serviços de orientação acadêmica e todos os tipos de trabalho acadêmico, como teses, TCC, dissertações..."
     />
-    <link
-      rel="icon"
-      href="./images/logo.avif"
-      type="image/png"
-    />
+    <link rel="icon" href="./images/logo.avif" type="image/png" />
     <link rel="stylesheet" href="./styles/services/styles-services.css" />
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/body.css">
+    <link rel="stylesheet" href="./styles/footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   </head>
 
   <body>
-    Olá mundo
+    <header class="cabecalho">
+      <nav class="cabecalho__nav" aria-label="Menu de navegação principal" role="navigation" >
+        <div class="cabecalho__nav__logo">
+            <img src="./images/logo.avif" alt="Logo da empresa Revisa Master" />
+        </div>
+
+        <ul class="cabecalho__nav__menu">
+            <li><a href="./index.html">Página inicial</a></li>
+            <li><a href="./services.html">Nossos serviços</a></li>
+            <li><a href="./about.html">Sobre nós</a></li>
+            <li><a href="/">Dúvidas</a></li>
+            <li><a href="/">Blog</a></li>
+        </ul>
+
+        <div class="cabecalho__nav__button">
+            <button class="contact-button">Fale conosco</button>
+        </div>
+
+        <div class="cabecalho__nav__dropdown">
+            <button>☰</button>
+            <div class="content">
+              <a href="./index.html">Página inicial</a>
+              <a href="./services.html">Nossos serviços</a>
+              <a href="./about.html">Sobre nós</a>
+              <a href="/">Dúvidas</a>
+              <a href="/">Blog</a>
+            </div>
+          </div>
+      </nav>
+    </header>
+
+    <section class="hero-section">
+      <video autoplay muted loop playsinline id="myVideo" aria-label="Vídeo de introdução da Revisa Master">
+        <source src="./videos/Video_entrada.mp4" type="video/mp4" />
+        Seu navegador não suporta a reprodução de vídeos.
+      </video>
+      <div class="hero-text">
+        <h1>Conquiste seu diploma com a Revisa Master</h1>
+      </div>
+    </section>
+
+    <section class="section-content-2">
+      <div class="content-container">
+        <svg class="svg-content" xmlns="http://www.w3.org/2000/svg">
+          <!-- Linha superior -->
+          <line x1="1" y1="1" x2="440" y2="1" stroke="#333" />
+          <!-- Linha esquerda vertical -->
+          <line x1="1" y1="1" x2="1" y2="145" stroke="#333" />
+          <!-- Linha inferior -->
+          <line x1="1" y1="145" x2="470" y2="145" stroke="#333" />
+          <!-- Linha central vertical -->
+          <line x1="525" y1="140" x2="525" y2="140" stroke="#333" />
+          <!-- Linha direita vertical -->
+          <line x1="930" y1="1" x2="930" y2="140" stroke="#333" />
+        </svg>
+        <div class="text-content">
+          <h2>Orientador Particular</h2>
+          <hr />
+          <p>No seu ritmo, no seu tempo, até a excelência.</p>
+        </div>
+        <div class="list-content">
+          <ul>
+            <li>
+              <strong>Artigos atuais e direcionados</strong> ao seu trabalho
+            </li>
+            <li>
+              <strong>Orientador disponível</strong> para dúvidas a qualquer
+              momento
+            </li>
+            <li>
+              <strong>Cumpra objetivos</strong> e pedidos de seus professores
+            </li>
+            <li><strong>Feedbacks constantes</strong> durante o processo</li>
+            <li>
+              <strong>Trabalho formatado</strong> segundo normas da sua
+              Instituição
+            </li>
+            <li><strong>Apresentação eficiente</strong> e com impacto</li>
+            <li><strong>Banca de defesa</strong> preparada</li>
+            <li><strong>Autonomia e confiança</strong> no seu trabalho</li>
+          </ul>
+        </div>
+      </div>
+      <div class="button-container">
+        <a class="cta-button" href="#" role="button" aria-label="Peça seu orçamento">Peça seu orçamento</a>
+      </div>
+    </section>
+
+    <section class="section-content-3">
+      <div class="container">
+        <div class="left-column">
+          <div class="service-block">
+            <h2>Apresentações Visuais</h2>
+            <p>
+              Produção de <strong>slides, pôsteres e banners</strong> para
+              garantir um <strong>design impactante</strong> e conteúdo claro.
+              Totalmente personalizado para suas necessidades.
+            </p>
+          </div>
+          <div class="service-block">
+            <h2>Formatação e Revisão</h2>
+            <p>
+              <strong
+                >Formatação, revisão ortográfica e correção de
+                referências</strong
+              >
+              para seu trabalho acadêmico. Alinhado às normas acadêmicas e livre
+              de erros.
+            </p>
+          </div>
+          <div class="service-block">
+            <h2>Correção de Plágio</h2>
+            <p>
+              <strong>Identificação e correção de plágio</strong> utilizando
+              ferramentas confiáveis, garantindo originalidade e conformidade
+              com padrões éticos e acadêmicos.
+            </p>
+          </div>
+        </div>
+
+        <div class="right-column">
+          <div class="service-block">
+            <h2>Melhoria Textual</h2>
+            <p>
+              Serviço para <strong>aprimorar a escrita</strong> corrigindo erros
+              e ajustando frases, garantindo um texto
+              <strong>claro, coeso e de alta qualidade</strong>.
+            </p>
+          </div>
+          <div class="service-block">
+            <h2>Tradução</h2>
+            <p>
+              Tradução de documentos para
+              <strong>Inglês, Francês e Espanhol</strong>, além de traduções
+              para o <strong>Português</strong>, mantendo a qualidade e
+              precisão.
+            </p>
+          </div>
+          <div class="service-block">
+            <h2>Análise Textual</h2>
+            <p>
+              Avaliação precisa de seus textos, com
+              <strong>feedbacks práticos</strong> e sugestões para aprimorar
+              clareza e coesão.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="button-container2">
+        <a
+          class="cta-button2"
+          href="#"
+          role="button"
+          aria-label="Peça seu orçamento"
+          >Peça seu orçamento</a
+        >
+      </div>
+    </section>
+
+    <footer>
+      <!-- Menu do rodapé -->
+      <div class="footer-menu">
+        <ul>
+          <li><a href="#" aria-label="Página inicial">Página inicial</a></li>
+          <li><a href="#" aria-label="Nossos serviços">Nossos serviços</a></li>
+          <li><a href="#" aria-label="Sobre nós">Sobre nós</a></li>
+          <li><a href="#" aria-label="Dúvidas">Dúvidas</a></li>
+          <li><a href="#" aria-label="Blog">Blog</a></li>
+        </ul>
+      </div>
+  
+      <!-- Informações de contato -->
+      <div class="footer-contact">
+        <div class="social-media">
+          <a href="http://wa.me/5519995392568" aria-label="WhatsApp">
+            <img src="./images/social-media/logo_whatsapp.avif" alt="Ícone do WhatsApp" />
+          </a>
+          <a href="https://www.instagram.com/revisa.master/" aria-label="Instagram">
+            <img src="./images/social-media/logo_instagram.avif" alt="Ícone do Instagram" />
+          </a>
+          <a href="https://www.linkedin.com/in/gabriela-verruck-de-moraes/" aria-label="LinkedIn">
+            <img src="./images/social-media/logo_linkedin.avif" alt="Ícone do LinkedIn" />
+          </a>
+        </div>
+        <p><strong>WhatsApp:</strong> (19) 99539-2568</p>
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:a.revisamaster@gmail.com" aria-label="Enviar email para Revisa Master">a.revisamaster@gmail.com</a>
+        </p>
+      </div>
+  
+      <!-- Logo da empresa -->
+      <div class="footer-logo">
+        <h3>Revisa Master</h3>
+        <img src="./images/logo.avif" alt="Logo da Revisa Master" />
+        <p>CNPJ: 48.693.442/0001-97</p>
+      </div>
+    </footer>
+
+    <script src="./scripts/menu-toggle.js"></script>
+    <script src="./scripts/letra-svg.js"></script>
   </body>
 </html>
