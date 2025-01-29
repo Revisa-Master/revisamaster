@@ -1,5 +1,5 @@
-const menuToggle = document.querySelector('.cabecalho__nav__dropdown button');
-const dropDownContent = document.querySelector('.cabecalho__nav__dropdown .content');
+const menuToggle = document.querySelector('.dropdown button');
+const dropDownContent = document.querySelector('.dropdown .content');
 
 menuToggle.addEventListener('click', () => {
   dropDownContent.classList.toggle('active');

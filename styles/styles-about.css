@@ -1,4 +1,8 @@
-root {
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+/* ------ VARIÁVEIS GLOBAIS --------*/
+
+:root {
     --font-main: 'Questrial', 'sans-serif';
     --font-title: 'Times New Roman', 'serif';
     --color-font: #333;
