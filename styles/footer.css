@@ -1,5 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
+/* ------ VARIÁVEIS GLOBAIS --------*/
+
+:root {
+  --font-main: 'Questrial', 'sans-serif';
+  --font-title: 'Times New Roman', 'serif';
+  --color-font: #333;
+  --color-font-variation: #f0f0f0;
+  
+  --color-primary: #0c4467;
+  --color-secondary: #1C7290;
+  --color-background: #f0f0f0;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 footer {
     width: auto;
     height: 50vh;
