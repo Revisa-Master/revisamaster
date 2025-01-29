@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+
+:root {
+  --font-main: "Questrial", "sans-serif";
+  --font-title: "Times New Roman", "serif";
+  --color-font: #333;
+  --color-font-variation: #f0f0f0;
+
+  --color-primary: #0c4467;
+  --color-secondary: #1c7290;
+  --color-background: #f0f0f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* ---------- ELEMENTOS DO HEADER ---------- */
+/* Header padrão */
+.cabecalho {
+  padding: 1rem 2rem;
+}
+
+.cabecalho__nav__logo img {
+  width: 5rem;
+  height: auto;
+}
+
+.cabecalho__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.cabecalho__nav__menu {
+  display: flex;
+  gap: 70px;
+}
+
+.cabecalho__nav li {
+  list-style-type: none;
+}
+
+.cabecalho__nav a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.cabecalho__nav a:hover {
+  color: #1c7290;
+}
+
+.cabecalho__nav__button {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contact-button {
+  color: #fff;
+  background-color: #1c7290;
+  text-decoration: none;
+  border: none;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.contact-button:hover {
+  background-color: #132741;
+}
+
+.cabecalho__nav__dropdown button {
+  display: none; /* Oculta o menu dropdown */
+  background-color: #0c4467;
+  border: none;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.cabecalho__nav__dropdown .content {
+  display: none;
+  position: absolute;
+  background-color: #f0f0f0;
+  box-shadow: 2px 2px 2px #333;
+  padding: 2rem;
+  flex-direction: column;
+  gap: 2rem;
+  z-index: 10;
+  left: 0; /* Ajusta a posição do dropdown no mobile */
+  width: 100vw;
+  text-align: center;
+}
+
+.cabecalho__nav__dropdown .content a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 0.5rem 0rem;
+}
+
+.cabecalho__nav__dropdown .content a:hover {
+  color: #1c7290;
+}
+
+/* ================================*/
+/* Breakpoint para Mobile - Header */
+/* ================================*/
+@media (max-width: 768px) {
+  .cabecalho {
+    flex-direction: row; /* Elementos em linha no mobile */
+    justify-content: space-between; /* Espaça os elementos principais */
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .cabecalho__nav__menu,
+  .cabecalho__nav__button {
+    display: none; /* Oculta o menu principal no mobile */
+  }
+
+  .cabecalho__nav__dropdown button {
+    display: block; /* Exibe o botão toggle no mobile */
+    color: #fff;
+  }
+
+  .cabecalho__nav__dropdown .content.active {
+    display: flex; /* Mostra o dropdown quando ativo */
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 1025px) {
+  .cabecalho__nav a {
+    font-size: 0.8rem;
+  }
+
+  .cabecalho__nav__button {
+    gap: 0.5rem;
+  }
+}
