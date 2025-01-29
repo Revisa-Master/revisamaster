@@ -121,38 +121,37 @@
   
   /* Breakpoint para Mobile */
   @media (max-width: 768px) {
-      header {
-          flex-direction: row; /* Elementos em linha no mobile */
-          justify-content: space-between; /* Espaça os elementos principais */
-          align-items: center;
-          padding: 1rem;
-      }
+    .cabecalho {
+      width: 100vw;
+      flex-direction: row; /* Elementos em linha no mobile */
+      justify-content: space-between; /* Espaça os elementos principais */
+      align-items: center;
+      padding: 1rem;
+    }
   
-      .cabecalho .logo img {
-          flex: 1; /* Ocupa espaço proporcional */
-      }
+    .cabecalho__nav__links,
+    .cabecalho__nav__button {
+      display: none; /* Oculta o menu principal no mobile */
+    }
   
-      .dropdown button {
-          display: block; /* Exibe o botão toggle no mobile */
-      }
+    .cabecalho__nav__dropdown button {
+      display: block; /* Exibe o botão toggle no mobile */
+      color: #fff;
+    }
   
-      .button {
-          flex: 1;
-          display: none;
-          justify-content: flex-end; /* Alinha o botão ao lado direito */
-      }
+    .cabecalho__nav__dropdown .content.active {
+      display: flex; /* Mostra o dropdown quando ativo */
+      flex-direction: column;
+      gap: 1rem;
+    }
+  }
   
-      nav {
-          display: none; /* Oculta o menu principal no mobile */
-      }
+  @media (max-width: 1025px) {
+    .cabecalho__nav a {
+      font-size: 0.8rem;
+    }
   
-      .dropdown .content {
-          display: none; /* Esconde o dropdown por padrão */
-      }
-  
-      .dropdown .content.active {
-          display: flex; /* Mostra o dropdown quando ativo */
-          flex-direction: column;
-          gap: 1rem;
-      }
+    .cabecalho__nav__button {
+      gap: 0.5rem;
+    }
   }

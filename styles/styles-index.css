@@ -466,7 +466,6 @@ align-content: center;
 }
 
 .container-content-5 .block{
-  margin:auto;
   display: flex; /* Ativa Flexbox */
   flex-direction: column; /* Alinha os elementos verticalmente */
   justify-content: start; /* Centraliza verticalmente */
@@ -538,12 +537,28 @@ align-content: center;
 
 @media (max-width: 768px) {
   .section-content-5 h2{
-      font-size: 2rem;
+      font-size: 1.5rem;
       line-height: 1rem;
   }
 
   .svg-content-section-5{
     display: none;
+  }
+
+  .container-content-5 .block{
+    padding: 2rem;
+    height: 40vh;
+  }
+
+  .container-content-5{
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .container-content-5 h3 {
+    font-size: 6rem;
+    line-height: auto; /* Tamanho consistente com a altura */
+    text-align: center; /* Alinha texto */
   }
 }
 
