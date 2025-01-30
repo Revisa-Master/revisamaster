@@ -96,6 +96,7 @@ section {
   width: 15rem;
   height: 4rem;
   margin-top: 2rem;
+  text-decoration: none;
 }
 
 .button-section:hover {

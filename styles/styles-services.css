@@ -334,6 +334,7 @@
   width: 15rem;
   height: 3rem;
   box-shadow: 2px 2px 4px #333;
+  text-decoration: none;
 }
 
 .section-content-4__container__reviews__button:hover{

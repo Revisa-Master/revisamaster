@@ -412,6 +412,7 @@ height: 3rem;
 box-shadow: 2px 2px 4px #333;
 text-align: center;
 align-content: center;
+text-decoration: none;
 }
 
 .section-content-4 a:hover {
@@ -518,6 +519,7 @@ align-content: center;
   box-shadow: 2px 2px 4px #333;
   z-index: 1;
   align-content: center;
+  text-decoration: none;
 }
 
 .section-content-5 a:hover {
@@ -615,6 +617,7 @@ align-content: center;
   width: 15rem;
   height: 3rem;
   box-shadow: 2px 2px 4px #333;
+  text-decoration: none;
 }
 
 .section-content-6__container__reviews__button:hover{
