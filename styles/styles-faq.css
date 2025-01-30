@@ -3,22 +3,80 @@
 /* ------ VARIÁVEIS GLOBAIS --------*/
 
 :root {
-    --font-main: 'Questrial', 'sans-serif';
-    --font-title: 'Times New Roman', 'serif';
-    --color-font: #333;
-    --color-font-variation: #f0f0f0;
-    
-    --color-primary: #0c4467;
-    --color-secondary: #1C7290;
-    --color-background: #f0f0f0;
+  --font-main: "Questrial", "sans-serif";
+  --font-title: "Times New Roman", "serif";
+  --color-font: #333;
+  --color-font-variation: #f0f0f0;
+
+  --color-primary: #0c4467;
+  --color-secondary: #1c7290;
+  --color-background: #f0f0f0;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 main {
-    background-color: var(--color-background);
+  background-color: var(--color-background);
+}
+
+
+
+/* =============================*/
+/* Estilos da Section Content 1 */
+/* =============================*/
+section {
+  width: 100%;
+}
+
+.question {
+  border-bottom: 1px solid #ccc;
+  padding: 20px;
+}
+
+.question input,
+.question .answer {
+  display: none;
+}
+
+.question label {
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 30px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.question input:checked ~ .answer {
+  display: block;
+}
+
+.section-content-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 50px;
+}
+
+.question-item1 {
+  padding: 40px;
+  display: grid;
+  align-content: start;
+  gap: 40px;
+}
+
+.question-item1 h1 {
+  font-size: 46px;
+}
+
+.question-item2 {
+  padding: 40px;
+}
+
+@media (max-width: 768px) {
+  .section-content-1 {
+    display: block;
+  }
 }
