@@ -4,26 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sobre nós | Revisa Master</title>
-    <link rel="icon" href="./images/logo.avif" type="image/png" />
-    <link rel="stylesheet" href="./styles/styles-header.css" />
-    <link rel="stylesheet" href="./styles/styles-about.css" />
-    <link rel="stylesheet" href="./styles/footer.css" />
+    <link rel="icon" href="./static/images/logo.avif" type="image/png" />
+    <link rel="stylesheet" href="./static/styles/styles-header.css" />
+    <link rel="stylesheet" href="./static/styles/styles-about.css" />
+    <link rel="stylesheet" href="./static/styles/footer.css" />
   </head>
   <body>
     <header class="cabecalho">
       <nav class="cabecalho__nav">
         <div class="cabecalho__nav__logo">
           <a href="index.html"
-            ><img src="./images/logo.avif" alt="Logo da empresa"
+            ><img src="./static/images/logo.avif" alt="Logo da empresa"
           /></a>
         </div>
 
         <div class="cabecalho__nav__links">
-          <li><a href="index.html">Página inicial</a></li>
-          <li><a href="services.html">Nossos serviços</a></li>
-          <li><a href="about.html">Sobre nós</a></li>
-          <li><a href="faq.html">Dúvidas</a></li>
-          <li><a href="https://www.revisamaster.com.br/blog">Blog</a></li>
+          <li><a href="/index">Página inicial</a></li>
+          <li><a href="/services">Nossos serviços</a></li>
+          <li><a href="/about">Sobre nós</a></li>
+          <li><a href="/faq">Dúvidas</a></li>
+          <li><a href="/contato">Contato</a></li>
         </div>
 
         <div class="cabecalho__nav__button">
@@ -34,19 +34,19 @@
       <ul class="cabecalho__nav__dropdown">
         <button>☰</button>
         <li class="content">
-          <a href="index.html">Página inicial</a>
-          <a href="services.html">Nossos serviços</a>
-          <a href="about.html">Sobre nós</a>
-          <a href="faq.html">Dúvidas</a>
-          <a href="https://www.revisamaster.com.br/blog">Blog</a>
+          <a href="/index">Página inicial</a>
+          <a href="/services">Nossos serviços</a>
+          <a href="/about">Sobre nós</a>
+          <a href="/faq">Dúvidas</a>
+          <a href="/contato">Contato</a>
         </li>
       </ul>
     </header>
 
     <main>
-      <section class="hero-section-about hidden">
+      <section class="hero-section-about">
         <video class="hero-section-about__video" autoplay loop muted>
-          <source src="./videos/video-about.mp4" type="video/mp4" />
+          <source src="./static/videos/video-about.mp4" type="video/mp4" />
         </video>
 
         <div class="hero-section-about__content">
@@ -54,7 +54,7 @@
         </div>
       </section>
 
-      <section class="content-about hidden">
+      <section class="content-about">
         <h1>Missão</h1>
         <p>
           Nossa missão é transformar a vida acadêmica de alunos por todo o país.
@@ -62,7 +62,7 @@
         </p>
       </section>
 
-      <section class="content-about hidden">
+      <section class="content-about">
         <h1>Visão</h1>
         <p>
           Queremos ser a referência principal para estudantes e profissionais em
@@ -71,7 +71,7 @@
         </p>
       </section>
 
-      <section class="content-about hidden">
+      <section class="content-about">
         <h1>História</h1>
         <p>
           A nossa história começou quando Gabriela Verruck de Moraes, então
