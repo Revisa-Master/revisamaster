@@ -35,7 +35,7 @@
       align-items: center;
       justify-content: space-between;
       list-style-type: none;
-      gap: 10rem
+      gap: 10rem;
     }
   
   
@@ -90,7 +90,9 @@
       display: none; /* Oculta o menu dropdown */
       border: none;
       cursor: pointer;
-      padding: 1rem;
+      padding: 2rem;
+      font-size: 1.3rem;
+      color: var(--color-font);
   }
   
   .cabecalho__nav__dropdown .content {
@@ -101,7 +103,10 @@
       padding: 2rem;
       flex-direction: column;
       gap: 2rem;
-      z-index: 10;
+      z-index: 3;
+      left: 0;
+      width: 100%;
+      text-align: center;
   }
   
   .cabecalho__nav__dropdown .content a {
@@ -137,7 +142,6 @@
   
     .cabecalho__nav__dropdown button {
       display: block; /* Exibe o botão toggle no mobile */
-      color: #fff;
     }
   
     .cabecalho__nav__dropdown .content.active {
