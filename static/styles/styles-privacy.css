@@ -61,4 +61,48 @@ main {
     font-size: 5rem;
     font-family: var(--font-title);
 }
+
+
+/* =============================*/
+/* Estilos do Section Content 2 */
+/* =============================*/
+
+.section-content-2{
+    display: flex;
+    flex-direction: column;
+    padding: 100px 25%;
+    gap: 40px;
+}
+
+@media (max-width: 768px) {
+    .section-content-2 {
+        padding: 50px 15%;
+    }
+}
+
+h3{
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+h5{
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+
+p,li{
+    font-size: 15px;
+}
+
+ul,li{
+    margin-left: 1rem;
+}
+
+ul{
+    margin-bottom: 20px;
+}
+
+
+
   
