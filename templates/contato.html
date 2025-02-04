@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./static/styles/styles-header.css">
+    <link rel="stylesheet" href="./static/styles/styles-contact.css">
+    <link rel="stylesheet" href="./static/styles/footer.css">
     <title>Document</title>
 </head>
 <body>
@@ -38,5 +40,86 @@
           </li>
         </ul>
       </header>
+
+
+    <main>
+        <div class="hero-section-contact">
+            <div class="hero-section-contact__img">
+                <img src="./static/images/img-contact.jpg" alt="black woman working on a laptop">
+            </div>
+            <div class="hero-section-about__content"><h1>Contato</h1></div>
+        </div>
+        
+        <div class="contact-form">    
+            <div class="contact-form__container-1">    
+                <input type="text" placeholder="Nome ">  
+                <input type="email" placeholder="Email">
+            </div>
+            
+            <div class="contact-form__container-2">
+                <select name="servico" id="servico">
+                    <option value="" disabled selected>Selecione um serviço</option>
+                    <option value="Apresentaces">Aprentações visuais</option>
+                    <option value="Formatacao">Formatação e Revisão</option>
+                    <option value="melhoria-textual">Melhoria textual</option>
+                    <option value="traducao">Tradução</option>
+                    <option value="correcao-plagio">Correção de plágio</option>
+                    <option value="analise-textual">Análise textual</option>
+                </select>
+                <input type="number" placeholder="Número de páginas">
+                <input type="date" placeholder="Prazo">
+            </div>
+            
+            <div class="contact-form__mensagem">
+                <textarea name="mensagem" id="mensagem" cols="70" rows="10" placeholder="Mensagem"></textarea>
+            </div>
+            
+            <div class="contact-form__button">
+                <button type="submit">Enviar</button>
+            </div>
+        
+        </div>
+    
+    </main>
+
+    <footer>
+    <!-- Menu do rodapé -->
+        <div class="footer-menu">
+        <ul>
+            <li><a href="index.html" aria-label="Página inicial">Página inicial</a></li>
+            <li><a href="services.html" aria-label="Nossos serviços">Nossos serviços</a></li>
+            <li><a href="about.html" aria-label="Sobre nós">Sobre nós</a></li>
+            <li><a href="faq.html" aria-label="Dúvidas">Dúvidas</a></li>
+            <li><a href="https://www.revisamaster.com.br/blog" aria-label="Blog">Blog</a></li>
+        </ul>
+        </div>
+
+        <!-- Informações de contato -->
+        <div class="footer-contact">
+        <div class="social-media">
+            <a href="http://wa.me/5519995392568" aria-label="WhatsApp">
+            <img src="./images/social-media/logo_whatsapp.avif" alt="Ícone do WhatsApp" />
+            </a>
+            <a href="https://www.instagram.com/revisa.master/" aria-label="Instagram">
+            <img src="./images/social-media/logo_instagram.avif" alt="Ícone do Instagram" />
+            </a>
+            <a href="https://www.linkedin.com/in/gabriela-verruck-de-moraes/" aria-label="LinkedIn">
+            <img src="./images/social-media/logo_linkedin.avif" alt="Ícone do LinkedIn" />
+            </a>
+        </div>
+        <p><strong>WhatsApp:</strong> (19) 99539-2568</p>
+        <p>
+            <strong>Email:</strong>
+            <a href="mailto:a.revisamaster@gmail.com" aria-label="Enviar email para Revisa Master">a.revisamaster@gmail.com</a>
+        </p>
+        </div>
+
+        <!-- Logo da empresa -->
+        <div class="footer-logo">
+        <h3>Revisa Master</h3>
+        <img src="./images/logo.avif" alt="Logo da Revisa Master" />
+        <p>CNPJ: 48.693.442/0001-97</p>
+        </div>
+    </footer>
 </body>
 </html>
