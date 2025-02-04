@@ -54,7 +54,7 @@ main {
     object-fit: cover;
     z-index: 0;
     opacity: 0.6;
-}
+}   
 
 .hero-section-about__content {
     display: flex;
