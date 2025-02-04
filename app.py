@@ -43,5 +43,10 @@ def faq():
 def contact():
     return render_template('contato.html')
 
+# Rota para a página de Política de Privacidade
+@app.route('/privacy')
+def privacy():
+    return render_template('privacy.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
