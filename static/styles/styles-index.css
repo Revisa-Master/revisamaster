@@ -92,7 +92,7 @@ body {
  
   .overlay__left-col__mobile-button a{
      display: none;
-     font-size: 1.5rem;
+     font-size: 1.25rem;
      color: var(--color-background);
      background-color: var(--color-primary);
      border: none;
@@ -107,8 +107,7 @@ body {
   .overlay__left-col__mobile-button a:hover {
     background-color: var(--color-secondary);
     color: var(--color-font-variation);
-    font-size: 1.6rem;
-    font-weight: bold;
+    font-size: 1.35rem;
   }
   /* Ajustes específicos da coluna direita */
  
@@ -135,7 +134,7 @@ body {
  
   .overlay__right-col a {
     background-color: var(--color-background);
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: var(--color-font);
     border: none;
     cursor: pointer;
@@ -152,8 +151,7 @@ body {
   .overlay__right-col a:hover {
     background-color: var(--color-secondary);
     color: var(--color-font-variation);
-    font-size: 1.6rem;
-    font-weight: bold;
+    font-size: 1.35rem;
     box-shadow: 2px 2px 4px #333;
   }
  
@@ -252,7 +250,6 @@ text-decoration: none;
 background-color: var(--color-secondary);
 color: var(--color-font-variation);
 font-size: 1.6rem;
-font-weight: bold;
 }
 
 .section-content-2-polygon {
@@ -330,8 +327,7 @@ font-weight: bold;
    font-size: 5rem;
    text-align: center;
    color: #ff4040;
-   padding: 4rem 0;
-
+   padding-bottom: 1rem;
  }
 
 /*texto para todos os svgs*/
@@ -382,25 +378,42 @@ svg text {
   display: flex;
   flex-direction: column;
   color: var(--color-font-variation);         
-  padding-top: 2rem; /* Adicionado padding correto para espaçamento */
   text-align: center;
   align-items: center;  
   line-height: 1.5; /* Linha ajustada para boa legibilidade */
   width: 100%;
-  height: 40vh; /* Ajusta dinamicamente a altura */ 
-  background-color: var(--color-secondary); 
+  height: 45vh; /* Ajusta dinamicamente a altura */ 
+  background-color: var(--color-primary); 
   opacity: 1;
   gap: 2rem;
 }  
 
+.section-content-4__container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 90%;
+  height: 90%;
+}
+
+.section-content-4__container__svg{
+  position: absolute;
+}
+.section-content-4__container__svg line {
+  stroke: var(--color-background);
+  stroke-width: 1;
+}
+
 .section-content-4 h2 {
- font-size: 3rem;
+  display: flex;
+  font-size: 3rem;
  color: var(--color-font-variation);
 }
 
 .section-content-4 a{
-display: block;
-font-size: 1.5rem;
+font-size: 1.25rem;
 color: var(--color-font);
 background-color: var(--color-background);
 border: none;
@@ -416,10 +429,9 @@ text-decoration: none;
 }
 
 .section-content-4 a:hover {
-  background-color: var(--color-primary);
+  background-color: var(--color-secondary);
   color: var(--color-font-variation);
-  font-size: 1.6rem;
-  font-weight: bold;
+  font-size: 1.35rem;
   box-shadow: 2px 2px 4px #333;
 }      
 
@@ -509,7 +521,7 @@ text-decoration: none;
 .section-content-5 a {
   display: block;
   background-color: var(--color-primary);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: var(--color-font-variation);
   border: none;
   border-radius: 6px;
@@ -524,8 +536,7 @@ text-decoration: none;
 
 .section-content-5 a:hover {
   background-color: var(--color-secondary);
-  font-size: 1.6rem;
-  font-weight: bold;
+  font-size: 1.35rem;
 }
 
 .svg-content-section-5{
@@ -607,7 +618,7 @@ text-decoration: none;
   text-align: center;
   align-content: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: var(--color-font);
   background-color: var(--color-background);
   border: none;
@@ -623,8 +634,7 @@ text-decoration: none;
 .section-content-6__container__reviews__button:hover{
   background-color: var(--color-secondary);
   color: var(--color-font-variation);
-  font-size: 1.6rem;
-  font-weight: bold;
+  font-size: 1.35rem;
   box-shadow: 2px 2px 4px #333;
 }
 

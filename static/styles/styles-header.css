@@ -83,7 +83,6 @@
   .cabecalho__nav__button a:hover {
     background-color: var(--color-secondary);
     font-size: 1.1rem;
-    font-weight: bold;
   }
   
   .cabecalho__nav__dropdown button {
