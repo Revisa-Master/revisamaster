@@ -94,7 +94,7 @@ main {
     -webkit-text-fill-color: transparent;
 }
 
-.content-about p, ul {
+.content-about p, .content-about ul {
     font-size: 1.5rem;
     font-family: var(--font-main), sans-serif;
     padding: 2rem 20rem;
