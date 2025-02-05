@@ -43,7 +43,15 @@
         </ul>
       </header>
 
-
+    <!-- Aqui inserimos as mensagens flash -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert {{ category }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <!-- Fim das mensagens flash -->
     <main>
         <div class="hero-section-contact">
             <div class="hero-section-contact__img">
@@ -52,35 +60,36 @@
             <div class="hero-section-about__content"><h1>Contato</h1></div>
         </div>
         
-        <div class="contact-form">    
-            <div class="contact-form__container-1">    
-                <input type="text" placeholder="Nome ">  
-                <input type="email" placeholder="Email">
+        <form action="/enviar_email" method="POST">
+            <div class="contact-form">    
+                <div class="contact-form__container-1">    
+                    <input type="text" name="nome" placeholder="Nome ">  
+                    <input type="email" name="email" placeholder="Email">
+                </div>
+                
+                <div class="contact-form__container-2">
+                    <select name="servico" id="servico">
+                        <option value="" disabled selected>Selecione um serviço</option>
+                        <option value="Apresentaces">Aprentações visuais</option>
+                        <option value="Formatacao">Formatação e Revisão</option>
+                        <option value="melhoria-textual">Melhoria textual</option>
+                        <option value="traducao">Tradução</option>
+                        <option value="correcao-plagio">Correção de plágio</option>
+                        <option value="analise-textual">Análise textual</option>
+                    </select>
+                    <input type="number" name="paginas" placeholder="Número de páginas">
+                    <input type="date" name="prazo" placeholder="Prazo">
+                </div>
+                
+                <div class="contact-form__mensagem">
+                    <textarea name="mensagem" id="mensagem" cols="70" rows="10" placeholder="Mensagem"></textarea>
+                </div>
+                
+                <div class="contact-form__button">
+                    <button type="submit">Enviar</button>
+                </div>
             </div>
-            
-            <div class="contact-form__container-2">
-                <select name="servico" id="servico">
-                    <option value="" disabled selected>Selecione um serviço</option>
-                    <option value="Apresentaces">Aprentações visuais</option>
-                    <option value="Formatacao">Formatação e Revisão</option>
-                    <option value="melhoria-textual">Melhoria textual</option>
-                    <option value="traducao">Tradução</option>
-                    <option value="correcao-plagio">Correção de plágio</option>
-                    <option value="analise-textual">Análise textual</option>
-                </select>
-                <input type="number" placeholder="Número de páginas">
-                <input type="date" placeholder="Prazo">
-            </div>
-            
-            <div class="contact-form__mensagem">
-                <textarea name="mensagem" id="mensagem" cols="70" rows="10" placeholder="Mensagem"></textarea>
-            </div>
-            
-            <div class="contact-form__button">
-                <button type="submit">Enviar</button>
-            </div>
-        
-        </div>
+        </form>
     
     </main>
 

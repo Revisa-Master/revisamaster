@@ -1,18 +1,20 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, redirect, flash
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 import os
 
 app = Flask(__name__)
+app.secret_key = 'uma_chave_super_secreta'
+
 
 # Carregar variáveis de ambiente
 
-EMAIL_HOST = os.getenv('EMAIL_HOST', 'smtp.gmail.com')
-EMAIL_PORT = int(os.getenv('EMAIL_PORT', 587))
-EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
-RECIPIENT_EMAIL = os.getenv('RECIPIENT_EMAIL')
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "noreply.revisamaster.contato@gmail.com"
+EMAIL_HOST_PASSWORD = "nidz gesi ntpi prgx"  # Use a senha de app do Gmail!
+RECIPIENT_EMAIL = "a.revisamaster@gmail.com"
 
 # Rota para a página inicial
 @app.route('/')
@@ -42,6 +44,50 @@ def faq():
 @app.route('/contato')
 def contact():
     return render_template('contato.html')
+
+@app.route('/enviar_email', methods=['POST'])
+def enviar_email():
+    try:
+        # Capturar os dados do formulário
+        nome = request.form['nome']
+        email = request.form['email']
+        servico = request.form['servico']
+        paginas = request.form['paginas']
+        prazo = request.form['prazo']
+        mensagem = request.form['mensagem']
+
+        # Criar a mensagem do e-mail
+        subject = f"Novo contato de {nome} - {servico}"
+        body = f"""
+        Nome: {nome}
+        E-mail: {email}
+        Serviço desejado: {servico}
+        Número de páginas: {paginas}
+        Prazo: {prazo}
+
+        Mensagem:
+        {mensagem}
+        """
+        msg = MIMEMultipart()
+        msg['From'] = EMAIL_HOST_USER
+        msg['To'] = RECIPIENT_EMAIL
+        msg['Subject'] = subject
+        msg.attach(MIMEText(body, 'plain'))
+
+        # Configurar conexão com o servidor SMTP do Gmail
+        server = smtplib.SMTP(EMAIL_HOST, EMAIL_PORT)
+        server.starttls()
+        server.login(EMAIL_HOST_USER, EMAIL_HOST_PASSWORD)
+        server.sendmail(EMAIL_HOST_USER, RECIPIENT_EMAIL, msg.as_string())
+        server.quit()
+
+        flash("E-mail enviado com sucesso!", "success")
+
+    except Exception as e:
+        print(f"Erro ao enviar e-mail: {e}")
+        flash(f"Erro ao enviar o e-mail: {e}", "danger")
+    
+    return redirect('/contato')
 
 # Rota para a página de Política de Privacidade
 @app.route('/privacy')
