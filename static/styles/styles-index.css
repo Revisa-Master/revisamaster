@@ -92,7 +92,7 @@ body {
  
   .overlay__left-col__mobile-button a{
      display: none;
-     font-size: 1.25rem;
+     font-size: 1rem;
      color: var(--color-background);
      background-color: var(--color-primary);
      border: none;
@@ -107,7 +107,7 @@ body {
   .overlay__left-col__mobile-button a:hover {
     background-color: var(--color-secondary);
     color: var(--color-font-variation);
-    font-size: 1.35rem;
+    font-size: 1.1rem;
   }
   /* Ajustes específicos da coluna direita */
  
@@ -191,6 +191,7 @@ body {
   height: 40vh; /* Ajusta dinamicamente a altura */
   z-index: 1;
   display: flex;
+  flex-wrap: wrap;
   color: var(--color-font-variation);
   padding: 0; /* Remove qualquer padding interno */
   text-align: center;
@@ -234,7 +235,7 @@ body {
 
 .section-content-2__fourth-column a{
 display: none;
-font-size: 1.5rem;
+font-size: 1rem;
 color: var(--color-primary);
 background-color: var(--color-background);
 border: none;
@@ -249,7 +250,7 @@ text-decoration: none;
 .section-content-2__fourth-column a:hover {
 background-color: var(--color-secondary);
 color: var(--color-font-variation);
-font-size: 1.6rem;
+font-size: 1.35rem;
 }
 
 .section-content-2-polygon {
@@ -270,24 +271,34 @@ font-size: 1.6rem;
      flex-direction: column; /* Colunas empilhadas no mobile */
      justify-content: center; /* Centraliza verticalmente */
      align-items: center; /* Centraliza horizontalmente */
-     gap: 2rem; /* Espaçamento entre as colunas */
+     gap: 1rem; /* Espaçamento entre as colunas */
      height: auto; /* Altura dinâmica */
  }
 
- .section-content-2__first-column, .section-content-2__second-column, 
+ .section-content-2__first-column{
+      padding-top: 2rem;
+      padding-bottom: 1rem;
+      border-right: none;
+      border-bottom: 1px solid var(--color-background);
+    }
+
+ .section-content-2__second-column, 
  .section-content-2__third-column {
      padding: 1rem; /* Espaçamento interno */
+     padding-bottom: 2rem;
      border-right: none;
      border-bottom: 1px solid var(--color-background);
  }
 
  .section-content-2__fourth-column {
      padding: 0rem; /* Espaçamento interno */
+     padding-top: 1rem;
      border-right: none;
+     margin-bottom: 0;
  }
 
  .section-content-2__fourth-column p{
-          margin-bottom: 2rem;
+          margin-bottom: 0rem;
  }
 
  .section-content-2__fourth-column a {
@@ -303,31 +314,38 @@ font-size: 1.6rem;
  /* ---------- SECTION CONTENT 3 ---------- */
 
  .section-content-3 {
-  margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
   color: var(--color-font);         /* Letra branca para melhor contraste */
-  padding: 0 1.5rem;     /* Espaçamento interno */
+  padding: 0rem;     /* Espaçamento interno */
   text-align: center;  /* Centraliza o texto */
+  align-items: center;
   line-height: auto;
   background-color: var(--color-background);
-  justify-content: center;
-  align-items: center;
-  display: block;
-  gap: 4rem;
+  gap: 1rem;
+  height: auto;
 }
 
 .section-content-3 h2 {
+  white-space: normal;         /* Permite a quebra de linha padrão */
+  overflow-wrap: break-word;    /* Quebra palavras muito longas */
   font-size: 4rem;
   margin-top: 0px;
-  line-height: 2rem;
-  text-align: center;
+  line-height: auto;
   padding: 2rem 0;
 }
 
-.section-content-3 h3 {
+
+.section-content-3__container__urgente {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+.section-content-3__container__urgente h3 {
    font-size: 5rem;
-   text-align: center;
    color: #ff4040;
-   padding-bottom: 1rem;
+   padding: 4rem;
  }
 
 /*texto para todos os svgs*/
@@ -344,19 +362,25 @@ svg text {
 
 .svg.mobile{
    display: none;
-   width: 90vw; /* Ocupará 100% do contêiner pai */
-   height: auto; /* Mantém a proporção original */
-}
+   width: 100vw; /* Ocupará 100% do contêiner pai */
+   justify-content: center;
+   align-items: center;
+  }
 
 @media (max-width: 768px) {
-   .section-content-3 h2{
-       font-size: 1.5rem;
-       line-height: 1rem;
+  .section-content-3{
+    height:auto;
+  } 
+  .section-content-3 h2{
+       font-size: 3rem;
+       padding: 1rem;
+       padding-bottom: 0;
+       text-align: center;
    }
 
-   .section-content-3 h3 {
-       margin-top: 0px;
-       font-size: 3rem;
+
+   .section-content-3__container__urgente h3 {
+       font-size: 4rem;
        line-height: 1rem;
    }
    .svg.desktop {
@@ -368,10 +392,25 @@ svg text {
    }
 
    svg text {
-       font-size: 2rem;
+       font-size: 1.25rem;
    }
 }
 
+@media (max-width: 650px) {
+
+.section-content-3 h2{
+   font-size: 2.5rem;
+}
+
+.section-content-3__container__urgente h3 {
+    font-size: 3rem;
+    padding: 2rem 0;
+}
+
+svg text {
+  font-size: 1.15rem;
+}
+}
  /* ---------- SECTION CONTENT 4 ---------- */
 
  .section-content-4 {
@@ -393,7 +432,7 @@ svg text {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   width: 90%;
   height: 90%;
 }
@@ -409,7 +448,7 @@ svg text {
 .section-content-4 h2 {
   display: flex;
   font-size: 3rem;
- color: var(--color-font-variation);
+  color: var(--color-font-variation);
 }
 
 .section-content-4 a{
@@ -447,6 +486,7 @@ text-decoration: none;
 
   .section-content-4 a {
       display: block;
+      font-size: 1rem;
       width: 15rem;
       height: 3rem;
   }
@@ -465,6 +505,7 @@ text-decoration: none;
   background-color: var(--background-color);
   gap: 0rem;
   margin-bottom: 2rem;
+  max-width: 100%;
 }
 
 .container-content-5{
@@ -552,20 +593,27 @@ text-decoration: none;
   .section-content-5 h2{
       font-size: 1.5rem;
       line-height: 1rem;
+      margin: 0;
   }
 
   .svg-content-section-5{
     display: none;
   }
 
+  .svg-content-section-5 line {
+    display: none;
+  }
+
   .container-content-5 .block{
     padding: 2rem;
     height: 40vh;
+    width: 80%;
   }
 
   .container-content-5{
     flex-direction: column;
     width: 80%;
+    margin: 0;
   }
 
   .container-content-5 h3 {
