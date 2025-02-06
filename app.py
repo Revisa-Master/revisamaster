@@ -41,9 +41,9 @@ def faq():
     return render_template('faq.html')
 
 # Rota para a página de Contato (onde estará o formulário)
-@app.route('/contato')
+@app.route('/contacto')
 def contact():
-    return render_template('contato.html')
+    return render_template('contacto.html')
 
 @app.route('/enviar_email', methods=['POST'])
 def enviar_email():
@@ -57,7 +57,7 @@ def enviar_email():
         mensagem = request.form['mensagem']
 
         # Criar a mensagem do e-mail
-        subject = f"Novo contato de {nome} - {servico}"
+        subject = f"Novo contacto de {nome} - {servico}"
         body = f"""
         Nome: {nome}
         E-mail: {email}
@@ -87,7 +87,7 @@ def enviar_email():
         print(f"Erro ao enviar e-mail: {e}")
         flash(f"Erro ao enviar o e-mail: {e}", "danger")
     
-    return redirect('/contato')
+    return redirect('/contacto')
 
 # Rota para a página de Política de Privacidade
 @app.route('/privacy')
