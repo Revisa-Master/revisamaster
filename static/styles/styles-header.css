@@ -1,161 +1,160 @@
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
 /* ------ VARIÁVEIS GLOBAIS --------*/
-
 :root {
-    --font-main: 'Questrial', 'sans-serif';
-    --font-title: 'Times New Roman', 'serif';
+    --font-main: 'Questrial', sans-serif;
+    --font-title: 'Times New Roman', serif;
     --color-font: #333;
     --color-font-variation: #f0f0f0;
-    
     --color-primary: #0c4467;
     --color-secondary: #1C7290;
     --color-background: #f0f0f0;
-  }
-  
-  *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-/* ---------- HEADER ---------- */
-
-.cabecalho{
-    display: flex;
-    justify-content: center;
-    height: 20%;
-    background-color: var(--color-background);
-    width: 100%;
-    margin: 0 auto; /* Centraliza o cabeçalho */
-  }
-  
-  .cabecalho__nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      list-style-type: none;
-      gap: 10rem;
-    }
-  
-  
-  .cabecalho__nav__logo {
-    padding: 1rem 2rem;
-  }
-  
-  .cabecalho__nav__links{
-      display: flex;
-      flex: 1;
-      padding: auto;
-      gap: 2rem;
-  }
-  
-  .cabecalho__nav__links a {  
-    font-size: 1rem;
-    font-family: var(--font-main);
-    color: var(--color-font);
-    text-decoration: none;
-  }
-  
-  .cabecalho__nav__links a:hover {
-    color: var(--color-primary);
-  }
-  
-  .cabecalho__nav__button{
-      padding: 1rem 2rem;
-  }
-  
-  .cabecalho__nav__button a {
-    color: var(--color-font-variation);
-    background-color: var(--color-primary);
-    border-radius: 8px;
-    text-align: center;
-    font-size: 1rem;
-    font-family: var(--font-main);
-    cursor: pointer;
-    box-shadow: 1px 1px 2px var(--color-primary);
-    padding: 1rem 3rem;
-    display: inline-block;
-    text-decoration: none;
-    
-  }
-  
-  .cabecalho__nav__button a:hover {
-    background-color: var(--color-secondary);
-    font-size: 1.1rem;
-  }
-  
-  .cabecalho__nav__dropdown button {
-      display: none; /* Oculta o menu dropdown */
-      border: none;
-      cursor: pointer;
-      padding: 2rem;
-      font-size: 1.3rem;
-      color: var(--color-font);
-  }
-  
-  .cabecalho__nav__dropdown .content {
-      display: none;
-      position: absolute;
-      background-color: var(--color-background);
-      box-shadow: 2px 2px 2px #333;
-      padding: 2rem;
-      flex-direction: column;
-      gap: 2rem;
-      z-index: 3;
-      left: 0;
-      width: 100%;
-      text-align: center;
-  }
-  
-  .cabecalho__nav__dropdown .content a {
-      display: block;
-      color: var(--color-font);
-      text-decoration: none;
-      font-size: 1rem;
-      padding: 0.5rem 0rem;
-  }
-  
-  .cabecalho__nav__dropdown .content a:hover {
-      color: var(--color-secondary);
-  }
-  
-  .dropdown .content.active {
-    display: flex;
+    --transition-speed: 0.3s;
 }
 
-  /* Breakpoint para Mobile */
-  @media (max-width: 768px) {
-    .cabecalho {
-      width: 100vw;
-      flex-direction: row; /* Elementos em linha no mobile */
-      justify-content: space-between; /* Espaça os elementos principais */
-      align-items: center;
-      padding: 1rem;
-    }
-  
-    .cabecalho__nav__links,
-    .cabecalho__nav__button {
-      display: none; /* Oculta o menu principal no mobile */
-    }
-  
-    .cabecalho__nav__dropdown button {
-      display: block; /* Exibe o botão toggle no mobile */
-    }
-  
-    .cabecalho__nav__dropdown .content.active {
-      display: flex; /* Mostra o dropdown quando ativo */
-      flex-direction: column;
-      gap: 1rem;
-    }
+
+/* ------ RESET GLOBAL --------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ------ HEADER --------*/
+.cabecalho {
+  background: var(--color-background);
+  padding: 1rem 2rem;
+  font-family: var(--font-main);
+}
+
+.cabecalho__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cabecalho__nav__logo img {
+  max-height: 80px;
+  width: auto;
+}
+
+.cabecalho__nav__links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.cabecalho__nav__links li a {
+  text-decoration: none;
+  color: var(--color-font);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.cabecalho__nav__links li a:hover,
+.cabecalho__nav__links li a.active {
+  color: var(--color-secondary);
+}
+
+.cabecalho__nav__cta .cta__button {
+  background-color: var(--color-primary);
+  color: var(--color-font-variation);
+  padding: 1rem 3rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  white-space: nowrap; 
+  cursor: pointer;
+}
+
+.cabecalho__nav__cta .cta__button:hover {
+  background-color: var(--color-secondary);
+}
+
+/* Estilos para o dropdown (mobile) */
+.cabecalho__nav__dropdown {
+  display: none;
+}
+
+.dropdown__toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.dropdown__menu {
+  display: none;
+  position: absolute;
+  background-color: var(--color-background);
+  box-shadow: 2px 2px 2px var(--color-font);
+  padding: 2rem;
+  flex-direction: column;
+  z-index: 3;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.dropdown__menu li {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.dropdown__menu li:last-child {
+  margin-bottom: 0.5rem;
+}
+
+
+.dropdown__menu li a {
+  text-decoration: none;
+  color: var(--color-font);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.dropdown__menu li a:hover,
+.dropdown__menu li a.active {
+  color: var(--color-secondary);
+}
+
+.dropdown__toggle[aria-expanded="true"] + .dropdown__menu {
+  display: block;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  /* Telas médias (tablet) */
+  .cabecalho__nav__links {
+      gap: 1rem; 
   }
-  
-  @media (max-width: 1025px) {
-    .cabecalho__nav a {
-      font-size: 0.8rem;
-    }
-  
-    .cabecalho__nav__button {
-      gap: 0.5rem;
-    }
+
+  .cabecalho__nav__links li a {
+      font-size: 0.9rem;
   }
+
+  .cabecalho__nav__cta .cta__button {
+      padding: 0.8rem 1rem;
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Telas pequenas (mobile) */
+  .cabecalho__nav__links {
+      display: none;
+  }
+
+  .cabecalho__nav__dropdown {
+      display: block; 
+  }
+
+  .cabecalho__nav__cta {
+      margin-left: auto; 
+      margin-right: 1rem; 
+  }
+}
+
