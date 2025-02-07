@@ -20,35 +20,35 @@
 
 <body>
   <header class="cabecalho">
-    <nav class="cabecalho__nav">            
+    <nav class="cabecalho__nav" aria-label="Navegação principal">            
         <div class="cabecalho__nav__logo">
             <img src="./static/images/logo_rm.avif" alt="Logo da empresa">
         </div>
             
-        <div class="cabecalho__nav__links">
-            <li><a href="/index">Página inicial</a></li>
+        <ul class="cabecalho__nav__links">
+            <li><a class="active" href="/index">Página inicial</a></li>
             <li><a href="/services">Nossos serviços</a></li>
             <li><a href="/about">Sobre nós</a></li>
             <li><a href="/faq">Dúvidas</a></li>
             <li><a href="/contacto">Contacto</a></li>
-        </div>
+        </ul>
             
-        <div class="cabecalho__nav__button">
-            <a href="http://wa.me/5519995392568">Fale connosco agora</a>
+        <div class="cabecalho__nav__cta">
+            <a href="http://wa.me/5519995392568" class="cta__button">Fale connosco agora</a>
         </div>    
                 
+        <!-- Menu Dropdown para Mobile -->
+        <div class="cabecalho__nav__dropdown">
+            <button class="dropdown__toggle" aria-expanded="false" aria-controls="dropdown__menu">☰</button>
+            <ul id="dropdown__menu" class="dropdown__menu">
+                <li><a class="active" href="/index">Página inicial</a></li>
+                <li><a href="/services">Nossos serviços</a></li>
+                <li><a href="/about">Sobre nós</a></li>
+                <li><a href="/faq">Dúvidas</a></li>
+                <li><a href="/contacto">Contacto</a></li>
+            </ul>
+        </div>
     </nav>
-        
-    <ul class="cabecalho__nav__dropdown">
-      <button>☰</button>
-      <li class="content">
-        <a href="/index">Página inicial</a>
-        <a href="/services">Nossos serviços</a>
-        <a href="/about">Sobre nós</a>
-        <a href="/faq">Dúvidas</a>
-        <a href="/contacto">Contacto</a>
-      </li>
-    </ul>
   </header>
 
   <main>  
@@ -336,7 +336,7 @@
     </div>
   </footer>
   <script type="text/javascript" src="https://viewer.diagrams.net/js/viewer-static.min.js"></script>
-  <script src="./scripts/menu-toggle.js"></script>
-  <script src="./scripts/letra-svg.js"></script>
+  <script src="./static/scripts/menu-toggle.js"></script>
+  <script src="./static/scripts/letra-svg.js"></script>
 </body>
 </html>
