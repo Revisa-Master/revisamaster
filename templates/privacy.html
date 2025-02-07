@@ -8,7 +8,7 @@
     <link rel="icon" href="./static/images/logo.avif" type="image/png" />
     <link rel="stylesheet" href="./static/styles/styles-privacy.css">
     <link rel="stylesheet" href="./static/styles/styles-header.css" />
-    <link rel="stylesheet" href="./static/styles/footer.css" />
+    <link rel="stylesheet" href="./static/styles/styles-footer.css" />
 
 </head>
 <body>
@@ -296,44 +296,54 @@
     </main>
 
     <footer>
-        <!-- Menu do rodapé -->
-        <div class="footer-menu">
+        <!-- Menu de navegação do rodapé -->
+        <nav class="footer-menu" aria-label="Menu do rodapé">
           <ul>
             <li><a href="/index">Página inicial</a></li>
             <li><a href="/services">Nossos serviços</a></li>
             <li><a href="/about">Sobre nós</a></li>
-            <li><a href="/faq">Dúvidas</a></li>
+            <li><a href="/faq">Dúvidas frequentes</a></li>
             <li><a href="/contacto">Contacto</a></li>
-            <li><a href="/privacy">Política de Privacidade</a></li>
+            <li><a class="active" href="/privacy">Política de Privacidade</a></li>
           </ul>
-        </div>
-    
+        </nav>
+      
         <!-- Informações de contacto -->
-        <div class="footer-contact">
+        <div class="footer-contact" aria-label="Informações de contacto">
           <div class="social-media">
             <a href="http://wa.me/5519995392568" aria-label="WhatsApp">
-              <img src="./static/images/social-media/logo_whatsapp.avif" alt="Ícone do WhatsApp" />
+              <img src="./static/images/social-media/logo_whatsapp.avif" alt="WhatsApp da Revisa Master" />
             </a>
             <a href="https://www.instagram.com/revisa.master/" aria-label="Instagram">
-              <img src="./static/images/social-media/logo_instagram.avif" alt="Ícone do Instagram" />
+              <img src="./static/images/social-media/logo_instagram.avif" alt="Instagram da Revisa Master" />
             </a>
             <a href="https://www.linkedin.com/in/gabriela-verruck-de-moraes/" aria-label="LinkedIn">
-              <img src="./static/images/social-media/logo_linkedin.avif" alt="Ícone do LinkedIn" />
+              <img src="./static/images/social-media/logo_linkedin.avif" alt="LinkedIn da Revisa Master" />
             </a>
           </div>
-          <p><strong>WhatsApp:</strong> (19) 99539-2568</p>
+          <p><strong>WhatsApp:</strong> <a href="http://wa.me/5519995392568" aria-label="Enviar mensagem no WhatsApp">(19) 99539-2568</a></p>
           <p>
-            <strong>Email:</strong>
-            <a href="mailto:a.revisamaster@gmail.com" aria-label="Enviar email para Revisa Master">a.revisamaster@gmail.com</a>
+            Email de contacto:
+            <br>
+            <strong><a href="mailto:a.revisamaster@gmail.com" aria-label="Enviar email para Revisa Master">a.revisamaster@gmail.com</a></strong>
           </p>
         </div>
-    
-        <!-- Logo da empresa -->
-        <div class="footer-logo">
+      
+        <!-- Logo e informações da empresa -->
+        <div class="footer-logo" aria-label="Informações da empresa">
           <h3>Revisa Master</h3>
           <img src="./static/images/logo.avif" alt="Logo da Revisa Master" />
           <p>CNPJ: 48.693.442/0001-97</p>
         </div>
+
+        <!-- Logo e informações da empresa - versão mobile -->
+        <div class="footer-logo-mobile" aria-label="Informações da empresa">
+            <p>CNPJ: 48.693.442/0001-97</p>
+            <div>
+                <img src="./static/images/logo.avif" alt="Logo da Revisa Master" />
+                <h3>Revisa Master</h3>
+            </div>
+          </div>
     </footer>
 
     <script src="./static/scripts/menu-toggle.js"></script>

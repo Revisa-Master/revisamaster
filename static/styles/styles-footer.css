@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
+
+/* ------ VARIÁVEIS GLOBAIS --------*/
+
+:root {
+  --font-main: 'Questrial', 'sans-serif';
+  --font-title: 'Times New Roman', 'serif';
+  --color-font: #333;
+  --color-font-variation: #f0f0f0;
+  
+  --color-primary: #0c4467;
+  --color-secondary: #1C7290;
+  --color-background:  #f0f0f0;
+  --color-background-footer:  #9dadc6;
+}
+
+/* ------ RESET E ESTILOS GLOBAIS -------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-main);
+}
+
+/* ------ FOOTER -------- */
+footer {
+  width: 100%;
+  min-height: 50vh;
+  padding: 2rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  background: var(--color-background-footer);
+  color: var(--color-font);
+}
+
+/* Menu do rodapé */
+.footer-menu ul {
+  list-style-type: none;
+}
+
+.footer-menu li {
+  margin-bottom: 1rem;
+}
+
+.footer-menu a {
+  text-decoration: none;
+  color: var(--color-footer-text);
+  transition: color 0.3s ease;
+}
+
+.footer-menu li a:hover,
+.footer-menu li a.active {
+  color: var(--color-secondary);
+}
+
+/* Informações de contacto */
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  font-size: 1.2rem;
+}
+
+.footer-contact a {
+  text-decoration: none;
+  color: var(--color-font);
+}
+
+.footer-contact p {
+  text-align: center;
+}
+
+.social-media {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-media a img {
+  width: 2.5rem;
+  height: auto;
+  transition: opacity 0.3s ease;
+}
+
+.social-media a:hover img {
+  opacity: 0.8;
+}
+
+/* Logo da empresa */
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-logo-mobile {
+  display: none;
+}
+
+.footer-logo img {
+  width: 5rem;
+  height: auto;
+}
+
+.footer-logo p {
+  font-size: 1rem;
+  margin-top: 3rem;
+}
+
+/* ------ RESPONSIVIDADE -------- */
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+    min-height: 100vh;
+  }
+
+  .social-media a img {
+    width: 3rem;
+    height: auto;
+    transition: opacity 0.3s ease;
+  }
+
+  .footer-menu ul {
+    display: none;
+  }
+
+  .footer-contact {
+    gap: 4rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer-logo {
+    display: none;
+  }
+
+  .footer-logo-mobile{
+    display: block;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-logo-mobile p{
+    justify-self: center;
+  }
+
+  .footer-logo-mobile div{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+}
