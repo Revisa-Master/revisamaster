@@ -83,16 +83,18 @@ body {
     margin-top: 0;
     line-height: 2rem;
     font-family: var(--font-title);
+    text-shadow: 1px 1px 2px #333;
   }
  
   .overlay__left-col p {
     font-size: 1.5rem;
     font-family: var(--font-main), sans-serif;
+    text-shadow: 1px 1px 2px #333;
   }
  
   .overlay__left-col__mobile-button a{
      display: none;
-     font-size: 1rem;
+     font-size: 1.25rem;
      color: var(--color-background);
      background-color: var(--color-primary);
      border: none;
@@ -107,7 +109,7 @@ body {
   .overlay__left-col__mobile-button a:hover {
     background-color: var(--color-secondary);
     color: var(--color-font-variation);
-    font-size: 1.1rem;
+    font-size: 1.35rem;
   }
   /* Ajustes específicos da coluna direita */
  
@@ -122,6 +124,7 @@ body {
   }
   .overlay__right-col h1 {
     line-height: 1.5rem;
+    text-shadow: 1px 1px 2px #333;
   }
  
   .overlay__right-col p {
@@ -168,7 +171,7 @@ body {
      }
  
      .overlay__left-col h1 {
-         font-size: 4rem; /* Ajuste proporcional */
+         font-size: 5rem; /* Ajuste proporcional */
      }
  
      .overlay__left-col p {
@@ -196,20 +199,20 @@ body {
   padding: 0; /* Remove qualquer padding interno */
   text-align: center;
   background-color: var(--color-primary); /* Certifique-se de que a cor é consistente */
-  line-height: normal;
   margin: 0; /* Remove margens externas */
 }
 
 .section-content-2 h2 {
+  white-space: normal;         /* Permite a quebra de linha padrão */
+  overflow-wrap: break-word;    /* Quebra palavras muito longas */
  font-size: 2rem;
- margin-top: 0px;
- line-height: 2rem;
+ line-height: auto;
 }
 
 .section-content-2__first-column, .section-content-2__second-column, 
 .section-content-2__third-column, .section-content-2__fourth-column {
  flex: 1; /* Faz cada uma ocupar 1/4 do espaço */
- padding: 2rem rem; /* Espaço interno, se quiser */
+ padding: 1rem; /* Espaço interno, se quiser */
  display: flex;
  flex-direction: column; /* Alinha itens verticalmente */
  align-items: center;    /* Centraliza os itens horizontalmente */
@@ -230,12 +233,11 @@ body {
 .section-content-2__fourth-column{
  
  margin-right: 0px;
- padding: 0rem;
 }
 
 .section-content-2__fourth-column a{
 display: none;
-font-size: 1rem;
+font-size: 1.25rem;
 color: var(--color-primary);
 background-color: var(--color-background);
 border: none;
@@ -271,12 +273,13 @@ font-size: 1.35rem;
      flex-direction: column; /* Colunas empilhadas no mobile */
      justify-content: center; /* Centraliza verticalmente */
      align-items: center; /* Centraliza horizontalmente */
-     gap: 1rem; /* Espaçamento entre as colunas */
+     gap: 2rem; /* Espaçamento entre as colunas */
      height: auto; /* Altura dinâmica */
+     padding: 0 2rem;
  }
 
  .section-content-2__first-column{
-      padding-top: 2rem;
+      padding-top: 4rem;
       padding-bottom: 1rem;
       border-right: none;
       border-bottom: 1px solid var(--color-background);
@@ -292,13 +295,14 @@ font-size: 1.35rem;
 
  .section-content-2__fourth-column {
      padding: 0rem; /* Espaçamento interno */
+     padding-bottom: 2rem;
      padding-top: 1rem;
      border-right: none;
      margin-bottom: 0;
  }
 
  .section-content-2__fourth-column p{
-          margin-bottom: 0rem;
+          margin-bottom: 2rem;
  }
 
  .section-content-2__fourth-column a {
@@ -307,7 +311,6 @@ font-size: 1.35rem;
 
  .section-content-2__first-column h2, .section-content-2__second-column h2, .section-content-2__third-column h2, .section-content-2__fourth-column h2 {
      font-size: 1.5rem; /* Ajuste proporcional */
-     line-height: 0.5rem;
  }
 }
 
@@ -329,10 +332,11 @@ font-size: 1.35rem;
 .section-content-3 h2 {
   white-space: normal;         /* Permite a quebra de linha padrão */
   overflow-wrap: break-word;    /* Quebra palavras muito longas */
-  font-size: 4rem;
+  font-size: 6rem;
   margin-top: 0px;
   line-height: auto;
-  padding: 2rem 0;
+  padding-top: 2rem;
+  padding-bottom: 0;
 }
 
 
@@ -345,12 +349,13 @@ font-size: 1.35rem;
 .section-content-3__container__urgente h3 {
    font-size: 5rem;
    color: #ff4040;
-   padding: 4rem;
+   padding: 0rem;
+   padding-bottom: 3rem;
  }
 
 /*texto para todos os svgs*/
 .svg.desktop{
-   width: 60vw; /* Ocupará 100% do contêiner pai */
+   width: 90vw; /* Ocupará 100% do contêiner pai */
    height: auto; /* Mantém a proporção original */
    margin-bottom: 0px;
 }
@@ -367,12 +372,22 @@ svg text {
    align-items: center;
   }
 
-@media (max-width: 768px) {
+  @media (max-width: 1385px){
+    .section-content-3 h2{
+      font-size: 4.5rem;
+    }
+    .section-content-3 h3{
+      font-size: 4rem;
+    }
+  }  
+
+
+@media (max-width: 805px) {
   .section-content-3{
     height:auto;
   } 
   .section-content-3 h2{
-       font-size: 3rem;
+       font-size: 3.5rem;
        padding: 1rem;
        padding-bottom: 0;
        text-align: center;
@@ -380,8 +395,9 @@ svg text {
 
 
    .section-content-3__container__urgente h3 {
-       font-size: 4rem;
+       font-size: 4.5rem;
        line-height: 1rem;
+       padding: 4rem 0rem;
    }
    .svg.desktop {
    display: none;
@@ -399,17 +415,26 @@ svg text {
 @media (max-width: 650px) {
 
 .section-content-3 h2{
-   font-size: 2.5rem;
+   font-size: 3.5rem;
 }
 
 .section-content-3__container__urgente h3 {
-    font-size: 3rem;
+    font-size: 4rem;
     padding: 2rem 0;
 }
 
 svg text {
   font-size: 1.15rem;
 }
+}
+
+@media (max-width: 650px){
+  .section-content-3 h2{
+    font-size: 3rem;
+  }
+  .section-content-3__container__urgente h3 {
+    font-size: 3.5rem;
+  }
 }
  /* ---------- SECTION CONTENT 4 ---------- */
 
@@ -486,9 +511,13 @@ text-decoration: none;
 
   .section-content-4 a {
       display: block;
-      font-size: 1rem;
+      font-size: 1.25rem;
       width: 15rem;
       height: 3rem;
+  }
+
+  .section-content-4__container__svg line{
+    display: none;
   }
 }
 
@@ -589,10 +618,22 @@ text-decoration: none;
   stroke-width: 1;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1730px){
+  .svg-content-section-5 line{
+    display: none;
+  }
+
+  .container-content-5 .block{
+    padding: 2rem;
+    height: 50vh;
+    width: 100%;
+  }
+}
+
+@media (max-width: 843px) {
   .section-content-5 h2{
-      font-size: 1.5rem;
-      line-height: 1rem;
+      font-size: 2.5rem;
+      line-height: auto;
       margin: 0;
   }
 
@@ -604,16 +645,18 @@ text-decoration: none;
     display: none;
   }
 
+  .container-content-5{
+    gap: 0;
+  }
   .container-content-5 .block{
     padding: 2rem;
-    height: 40vh;
-    width: 80%;
+    height: 20vh;
+    width: 100%;
   }
 
   .container-content-5{
     flex-direction: column;
     width: 80%;
-    margin: 0;
   }
 
   .container-content-5 h3 {
@@ -701,6 +744,6 @@ text-decoration: none;
   .section-content-6__container__reviews__button:hover{
     background-color: var(--color-secondary);
     color: var(--color-font-variation);
-    font-size: 1.1rem;
+    font-size: 1.35rem;
   }
 }
