@@ -76,11 +76,16 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
     gap: 2rem;
     padding: 4rem;
     width: 100%;
     color: var(--color-font);
     background-color: var(--color-background);
+}
+
+.content-about:nth-child(4){
+    text-align: left;
 }
 
 .content-about h1 {
@@ -109,6 +114,57 @@ main {
 .content-about p strong {
     font-weight: bold;
 }
+
+
+/* ------ RESPONSIVIDADE --------*/
+@media (max-width: 1024px) {
+    .hero-section-about__content h1 {
+      font-size: 4rem;
+    }
+  
+    .content-about h1 {
+      font-size: 7.5rem;
+    }
+  
+    .content-about p,
+    .content-about ul {
+      font-size: 1.3rem;
+      padding: 0 10rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+  
+    .hero-section-about__content h1 {
+        font-size: 3rem;
+    }
+
+    .content-about h1 {
+      font-size: 5rem;
+    }
+  
+    .content-about p,
+    .content-about ul {
+      font-size: 1rem;
+      padding: 0 5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-section-about__content h1 {
+      font-size: 2rem;
+    }
+  
+    .content-about h1 {
+      font-size: 1.75rem;
+    }
+  
+    .content-about p,
+    .content-about ul {
+      font-size: 0.9rem;
+      padding: 0 1rem;
+    }
+  }
 
 
 
