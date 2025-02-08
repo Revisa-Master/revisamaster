@@ -59,6 +59,7 @@
 }
 
 .cabecalho__nav__cta .cta__button {
+  display: flex;
   background-color: var(--color-primary);
   color: var(--color-font-variation);
   padding: 1rem 3rem;
