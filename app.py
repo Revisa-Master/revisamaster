@@ -21,28 +21,28 @@ RECIPIENT_EMAIL = "a.revisamaster@gmail.com"
 def index():
     return render_template('index.html')
 
-@app.route('/index')
+@app.route('/')
 def pagina_inicial():
     return render_template('index.html')
 
 # Rota para a página Sobre
-@app.route('/about')
+@app.route('/sobre-nos')
 def about():
     return render_template('about.html')
 
 # Rota para a página de Serviços
-@app.route('/services')
+@app.route('/nossos-servicos')
 def services():
     return render_template('services.html')
 
 # Rota para a página FAQ
-@app.route('/faq')
+@app.route('/perguntas-frequentes')
 def faq():
     return render_template('faq.html')
 
 # Rota para a página de Contato (onde estará o formulário)
 @app.route('/contacto')
-def contact():
+def contacto():
     return render_template('contacto.html')
 
 @app.route('/enviar_email', methods=['POST'])
@@ -90,7 +90,7 @@ def enviar_email():
     return redirect('/contacto')
 
 # Rota para a página de Política de Privacidade
-@app.route('/privacy')
+@app.route('/politica-de-privacidade')
 def privacy():
     return render_template('privacy.html')
 
