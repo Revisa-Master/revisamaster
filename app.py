@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, redirect, flash
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from dotenv import load_dotenv
 import os
 
 app = Flask(__name__)
@@ -10,11 +11,11 @@ app.secret_key = 'uma_chave_super_secreta'
 
 # Carregar variáveis de ambiente
 
-EMAIL_HOST = "smtp.gmail.com"
-EMAIL_PORT = 587
-EMAIL_HOST_USER = "noreply.revisamaster.contato@gmail.com"
-EMAIL_HOST_PASSWORD = "nidz gesi ntpi prgx"  # Use a senha de app do Gmail!
-RECIPIENT_EMAIL = "a.revisamaster@gmail.com"
+EMAIL_HOST = os.environ.get('EMAIL_HOST')
+EMAIL_PORT = os.environ.get('EMAIL_PORT')
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+RECIPIENT_EMAIL = os.environ.get('RECIPIENT_EMAIL')
 
 # Rota para a página inicial
 @app.route('/')
