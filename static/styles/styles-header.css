@@ -154,8 +154,7 @@
   }
 
   .cabecalho__nav__cta {
-      margin-left: auto; 
-      margin-right: 1rem; 
+      display: none; 
   }
 }
 
