@@ -23,6 +23,38 @@ main {
   background-color: var(--color-background);
 }
 
+.whatsapp-fixo {
+  position: fixed;        /* Fixa o elemento na tela */
+  font-size: 3rem;
+  width: 5rem;            /* Largura do botão */
+  height: 5rem;           /* Altura do botão */
+  bottom: 2rem;           /* Distância da base da tela */
+  right: 4rem;            /* Distância da lateral direita da tela */
+  background-color: #1ea750; /* Cor de fundo (verde do WhatsApp) */
+  color: #fff;            /* Cor do ícone/fontes */
+  border-radius: 50%;     /* Deixa o botão circular */
+  display: flex;          /* Para centralizar o ícone dentro do botão */
+  align-items: center;    /* Centraliza verticalmente */
+  justify-content: center;/* Centraliza horizontalmente */
+  box-shadow: 4px 4px 12px var(--color-font); /* Sombras para dar destaque */
+  z-index: 1000;          /* Garante que fique por cima de outros elementos */
+  text-decoration: none;  /* Remove sublinhado do link */
+}
+
+.whatsapp-fixo:hover {
+  background-color: #20b857; /* Muda a cor no hover */
+}
+
+@media (max-width: 768px) {
+  .whatsapp-fixo {
+      font-size: 2rem; /* Ajusta o tamanho do ícone */
+      width: 4rem;     /* Ajusta a largura do botão */
+      height: 4rem;    /* Ajusta a altura do botão */
+      bottom: 2rem;    /* Ajusta a distância da base da tela */
+      right: 2rem;     /* Ajusta a distância da lateral direita da tela */
+  }
+}
+
 /* =============================*/
 /* Estilos da Section Content 1 */
 /* =============================*/
