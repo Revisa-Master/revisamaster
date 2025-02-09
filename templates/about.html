@@ -17,11 +17,11 @@
           </div>
               
           <ul class="cabecalho__nav__links">
-              <li><a href="/index">Página inicial</a></li>
-              <li><a href="/services">Nossos serviços</a></li>
-              <li><a class="active" href="/about">Sobre nós</a></li>
-              <li><a href="/faq">Dúvidas</a></li>
-              <li><a href="/contacto">Contacto</a></li>
+              <li><a href="{{ url_for('index') }}">Página inicial</a></li>
+              <li><a href="{{ url_for('services') }}">Nossos serviços</a></li>
+              <li><a class="active" href="{{ url_for('about') }}">Sobre nós</a></li>
+              <li><a href="{{ url_for('faq') }}">Dúvidas</a></li>
+              <li><a href="{{ url_for('contacto') }}">Contacto</a></li>
           </ul>
               
           <div class="cabecalho__nav__cta">
@@ -32,11 +32,11 @@
           <div class="cabecalho__nav__dropdown">
               <button class="dropdown__toggle" aria-expanded="false" aria-controls="dropdown__menu">☰</button>
               <ul id="dropdown__menu" class="dropdown__menu">
-                  <li><a href="/index">Página inicial</a></li>
-                  <li><a href="/services">Nossos serviços</a></li>
-                  <li><a class="active" href="/about">Sobre nós</a></li>
-                  <li><a href="/faq">Dúvidas</a></li>
-                  <li><a href="/contacto">Contacto</a></li>
+                  <li><a href="{{ url_for('index') }}">Página inicial</a></li>
+                  <li><a href="{{ url_for('services') }}">Nossos serviços</a></li>
+                  <li><a class="active" href="{{ url_for('about') }}">Sobre nós</a></li>
+                  <li><a href="{{ url_for('faq') }}">Dúvidas</a></li>
+                  <li><a href="{{ url_for('contacto') }}">Contacto</a></li>
               </ul>
           </div>
       </nav>
@@ -106,12 +106,12 @@
       <!-- Menu de navegação do rodapé -->
       <nav class="footer-menu" aria-label="Menu do rodapé">
         <ul>
-          <li><a href="/index">Página inicial</a></li>
-          <li><a href="/services">Nossos serviços</a></li>
-          <li><a class="active" href="/about">Sobre nós</a></li>
-          <li><a href="/faq">Dúvidas frequentes</a></li>
-          <li><a href="/contacto">Contacto</a></li>
-          <li><a href="/privacy">Política de Privacidade</a></li>
+          <li><a href="{{ url_for('index') }}">Página inicial</a></li>
+          <li><a href="{{ url_for('services') }}">Nossos serviços</a></li>
+          <li><a class="active" href="{{ url_for('about') }}">Sobre nós</a></li>
+          <li><a href="{{ url_for('faq') }}">Dúvidas frequentes</a></li>
+          <li><a href="{{ url_for('contacto') }}">Contacto</a></li>
+          <li><a href="{{ url_for('privacy') }}">Política de Privacidade</a></li>
         </ul>
       </nav>
     
