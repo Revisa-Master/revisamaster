@@ -38,10 +38,34 @@
   box-shadow: 4px 4px 12px var(--color-font); /* Sombras para dar destaque */
   z-index: 1000;          /* Garante que fique por cima de outros elementos */
   text-decoration: none;  /* Remove sublinhado do link */
+  transition: all ease-in-out 0.2s;
+}
+
+@keyframes whatsapp__button__animation {
+  0%, 33%, 66%, 100%{
+    transform: translateY(0);
+  }
+
+  10%, 80%{
+    transform: translateY(10px);
+  }
+
+  16%, 50%{
+    transform: translateY(15px);
+  }
+}
+
+.whatsapp__button__animation {
+  animation: whatsapp__button__animation ease-in-out 4s infinite;
+}
+
+.whatsapp__button__animation:hover {
+  animation: whatsapp__button__animation 2s;
 }
 
 .whatsapp-fixo:hover {
   background-color: #20b857; /* Muda a cor no hover */
+  
 }
 
 @media (max-width: 768px) {

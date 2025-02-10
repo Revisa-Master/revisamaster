@@ -44,10 +44,34 @@ body {
   box-shadow: 4px 4px 12px var(--color-font); /* Sombras para dar destaque */
   z-index: 1000;          /* Garante que fique por cima de outros elementos */
   text-decoration: none;  /* Remove sublinhado do link */
+  transition: all ease-in-out 0.2s;
+}
+
+@keyframes whatsapp__button__animation {
+  0%, 33%, 66%, 100%{
+    transform: translateY(0);
+  }
+
+  10%, 80%{
+    transform: translateY(10px);
+  }
+
+  16%, 50%{
+    transform: translateY(15px);
+  }
+}
+
+.whatsapp__button__animation {
+  animation: whatsapp__button__animation ease-in-out 4s infinite;
+}
+
+.whatsapp__button__animation:hover {
+  animation: whatsapp__button__animation 2s;
 }
 
 .whatsapp-fixo:hover {
   background-color: #20b857; /* Muda a cor no hover */
+  
 }
 
 @media (max-width: 768px) {
@@ -135,12 +159,14 @@ body {
      z-index: 2;
      width: 15rem;
      text-decoration: none;
+     transition: all ease-in-out 0.2s;
   }
 
   .overlay__left-col__mobile-button a:hover {
     background-color: var(--color-secondary);
     color: var(--color-font-variation);
-    font-size: 1.35rem;
+    font-size: 1.30rem;
+    border-radius: 0%;
   }
   /* Ajustes específicos da coluna direita */
  
@@ -180,13 +206,15 @@ body {
     align-content: center;
     text-decoration: none;
     border-radius: 6px;
+    transition: all ease-in-out 0.2s;
   }
  
   .overlay__right-col a:hover {
     background-color: var(--color-secondary);
     color: var(--color-font-variation);
-    font-size: 1.35rem;
+    font-size: 1.30rem;
     box-shadow: 2px 2px 4px #333;
+    border-radius: 0%;
   }
  
  
@@ -278,12 +306,14 @@ cursor: pointer;
 z-index: 2;
 width: 15rem;
 text-decoration: none;
+transition: all ease-in-out 0.2s;
 }
 
 .section-content-2__fourth-column a:hover {
 background-color: var(--color-secondary);
 color: var(--color-font-variation);
-font-size: 1.35rem;
+font-size: 1.30rem;
+border-radius: 0%;
 }
 
 .section-content-2-polygon {
@@ -522,13 +552,15 @@ box-shadow: 2px 2px 4px #333;
 text-align: center;
 align-content: center;
 text-decoration: none;
+transition: all ease-in-out 0.2s;
 }
 
 .section-content-4 a:hover {
   background-color: var(--color-secondary);
   color: var(--color-font-variation);
-  font-size: 1.35rem;
+  font-size: 1.30rem;
   box-shadow: 2px 2px 4px #333;
+  border-radius: 0%;
 }      
 
 @media (max-width: 768px) {
@@ -632,11 +664,13 @@ text-decoration: none;
   z-index: 1;
   align-content: center;
   text-decoration: none;
+  transition: all ease-in-out 0.2s;
 }
 
 .section-content-5 a:hover {
   background-color: var(--color-secondary);
-  font-size: 1.35rem;
+  font-size: 1.30rem;
+  border-radius: 0%;
 }
 
 .svg-content-section-5{
@@ -759,13 +793,15 @@ text-decoration: none;
   height: 3rem;
   box-shadow: 2px 2px 4px #333;
   text-decoration: none;
+  transition: all ease-in-out 0.2s;
 }
 
 .section-content-6__container__reviews__button:hover{
   background-color: var(--color-secondary);
   color: var(--color-font-variation);
-  font-size: 1.35rem;
+  font-size: 1.30rem;
   box-shadow: 2px 2px 4px #333;
+  border-radius: 0%;
 }
 
 
