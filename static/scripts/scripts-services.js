@@ -29,6 +29,14 @@ const fadeIn = new IntersectionObserver((entries) => {
     });
 });
 
+const buttonEffect = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('button__effect');
+            rightObserver.unobserve(entry.target); // Stop observing once animated
+        }
+    });
+});
 /*=========================================================
     CAPTURANDO SELETORES NO HTML HERO SECTION E SECTION 2
 ============================================================ */
@@ -36,6 +44,11 @@ const fadeIn = new IntersectionObserver((entries) => {
 document.querySelectorAll('.section-content-2__container, .hero-section__hero-text')
     .forEach(element => {
         fadeIn.observe(element);
+    });
+
+document.querySelectorAll('.button__effect_tag')
+    .forEach(element => {
+        buttonEffect.observe(element);
     });
 
 /*=============================================

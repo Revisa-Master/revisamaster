@@ -56,6 +56,20 @@
   }
 }
 
+@keyframes button__effect {
+  20% {
+    transform: translateY(40px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+
+  100%{
+    transform: translateY(0);
+  } 
+}
+
 .left__to__right {
   animation: left__to__right 2s ease-in-out forwards;
 }
@@ -64,6 +78,9 @@
 }
 .fade__in {
   animation: fade__in 2s ease-out forwards;
+}
+.button__effect{
+  animation: button__effect 3s ease-out forwards;
 }
 
 .whatsapp-fixo {
