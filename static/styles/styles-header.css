@@ -65,13 +65,15 @@
   padding: 1rem 3rem;
   border-radius: 8px;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease-in-out;
   white-space: nowrap; 
   cursor: pointer;
+  font-size: 1rem;
 }
 
 .cabecalho__nav__cta .cta__button:hover {
   background-color: var(--color-secondary);
+  border-radius: 0%;
 }
 
 /* Estilos para o dropdown (mobile) */
