@@ -80,10 +80,7 @@ main {
 }
 
 .hidden {
-    opacity: 0;
-    filter: blur(15px);
-    transition: all 2s;
-    transform: translateX(-50%);
+    opacity: 1;
 }
 
 .show {

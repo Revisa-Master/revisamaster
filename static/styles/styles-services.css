@@ -21,6 +21,50 @@
   overflow-x: hidden;
 }
 
+/* Keyframes with opacity included */
+@keyframes left__to__right {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes right__to__left {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade__in {
+  0% {
+    opacity: 0.5;
+    transform: scale(0.8) ;
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.left__to__right {
+  animation: left__to__right 2s ease-in-out forwards;
+}
+.right__to__left {
+  animation: right__to__left 2s forwards;
+}
+.fade__in {
+  animation: fade__in 2s ease-out forwards;
+}
 
 .whatsapp-fixo {
   position: fixed;        /* Fixa o elemento na tela */
@@ -244,11 +288,13 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   text-decoration: none;
+  transition: all 0.3s;
 }
 
 .section-content-2__container__button a:hover {
   background-color: var(--color-secondary);
-  font-size: 1.35rem;
+  font-size: 1.30rem;
+  border-radius:0;
 }
 
 @media (max-width: 768px) {
@@ -317,6 +363,7 @@
   display: flex;
   flex-direction: column;
   gap: 6rem;
+
 }
 
 .section-content-3__container__right-column {
@@ -367,11 +414,13 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   text-decoration: none;
+  transition: all 0.3s;
 }
 
 .section-content-3__button__cta:hover {
   background-color: #207095;
-  font-size: 1.35rem;
+  font-size: 1.30rem;
+  border-radius: 0;
 }
 
 @media (max-width: 768px) {
@@ -472,13 +521,14 @@
   height: 3rem;
   box-shadow: 2px 2px 4px #333;
   text-decoration: none;
+  transition: all 0.3s;
 }
 
 .section-content-4__container__reviews__button:hover{
   background-color: var(--color-secondary);
   color: var(--color-font-variation);
-  font-size: 1.35rem;
-  font-weight: bold;
+  font-size: 1.30rem;
+  border-radius: 0%;
   box-shadow: 2px 2px 4px #333;
 }
 
