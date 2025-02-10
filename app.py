@@ -7,16 +7,14 @@ import os
 
 app = Flask(__name__)
 app.secret_key = 'uma_chave_super_secreta'
-
+load_dotenv(dotenv_path='.env')
 
 # Carregar variáveis de ambiente
-
 EMAIL_HOST = os.environ.get('EMAIL_HOST')
 EMAIL_PORT = os.environ.get('EMAIL_PORT')
 EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
 RECIPIENT_EMAIL = os.environ.get('RECIPIENT_EMAIL')
-
 # Rota para a página inicial
 @app.route('/')
 def index():
@@ -52,17 +50,19 @@ def enviar_email():
         # Capturar os dados do formulário
         nome = request.form['nome']
         email = request.form['email']
-        servico = request.form['servico']
+        servico = request.form.getlist('servico')
         paginas = request.form['paginas']
         prazo = request.form['prazo']
         mensagem = request.form['mensagem']
 
+        servico_str = ', '.join(servico) if servico else 'Nenhum serviço selecionado'
+        
         # Criar a mensagem do e-mail
-        subject = f"Novo contacto de {nome} - {servico}"
+        subject = f"Novo contacto de {nome}"
         body = f"""
         Nome: {nome}
         E-mail: {email}
-        Serviço desejado: {servico}
+        Serviço desejado: {servico_str}
         Número de páginas: {paginas}
         Prazo: {prazo}
 
