@@ -73,16 +73,17 @@
 }
 
 .left__to__right {
-  animation: left__to__right 1.5s ease-in-out forwards;
+  animation: left__to__right 1.5s 0.3s ease-in-out backwards;
+  animation: name duration timing-function delay iteration-count direction fill-mode ;
 }
 .right__to__left {
-  animation: right__to__left 1.5s forwards;
+  animation: right__to__left 1.5s 0.3s ease-in-out backwards;
 }
 .fade__in {
-  animation: fade__in 1s ease-out forwards;
+  animation: fade__in 1s 0.3s ease-out backwards;
 }
 .button__effect{
-  animation: button__effect 2s ease-out forwards;
+  animation: button__effect 2s 0.5s ease-out backwards;
 }
 
 /* ---------- BODY ---------- */
