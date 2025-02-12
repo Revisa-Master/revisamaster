@@ -76,7 +76,7 @@ def enviar_email():
         msg.attach(MIMEText(body, 'plain'))
 
         # Configurar conexão com o servidor SMTP do Gmail
-        server = smtplib.SMTP(EMAIL_HOST, int(EMAIL_PORT))  # Converter PORT para inteiro
+        server = smtplib.SMTP(EMAIL_HOST, EMAIL_PORT)  # Converter PORT para inteiro
         server.ehlo()
         server.starttls()
         server.ehlo()
