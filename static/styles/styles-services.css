@@ -404,7 +404,6 @@
   max-width: 25vw;
   line-height: 1.5rem;
   font-family: var(--font-main);
-  text-justify: justify;
 }
 
 .section-content-3__container__service-block p strong {
