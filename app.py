@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, flash
+from flask_mail import Mail, Message
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -8,13 +9,18 @@ import os
 app = Flask(__name__)
 app.secret_key = 'uma_chave_super_secreta'
 load_dotenv(dotenv_path='.env')
+mail = Mail(app)
 
 # Carregar variáveis de ambiente
-EMAIL_HOST = os.environ.get('EMAIL_HOST')
-EMAIL_PORT = os.environ.get('EMAIL_PORT')
-EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
-RECIPIENT_EMAIL = os.environ.get('RECIPIENT_EMAIL')
+app.config['MAIL_SERVER'] = os.getenv('EMAIL_HOST')
+app.config['MAIL_PORT'] = int(os.getenv('EMAIL_PORT'))
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USE_SSL'] = False
+app.config['MAIL_USERNAME'] = os.getenv('EMAIL_HOST_USER')
+app.config['MAIL_PASSWORD'] = os.getenv('EMAIL_HOST_PASSWORD')
+app.config['MAIL_DEFAULT_SENDER'] = os.getenv('EMAIL_HOST_USER')
+
+
 # Rota para a página inicial
 @app.route('/')
 def index():
@@ -69,21 +75,8 @@ def enviar_email():
         Mensagem:
         {mensagem}
         """
-        msg = MIMEMultipart()
-        msg['From'] = EMAIL_HOST_USER
-        msg['To'] = RECIPIENT_EMAIL
-        msg['Subject'] = subject
-        msg.attach(MIMEText(body, 'plain'))
-
-        # Configurar conexão com o servidor SMTP do Gmail
-        server = smtplib.SMTP(EMAIL_HOST, EMAIL_PORT)  # Converter PORT para inteiro
-        server.ehlo()
-        server.starttls()
-        server.ehlo()
-        server.login(EMAIL_HOST_USER, EMAIL_HOST_PASSWORD)
-        server.sendmail(EMAIL_HOST_USER, RECIPIENT_EMAIL, msg.as_string())
-        server.quit()
-
+        msg = Message(subject, sender=email, recipients=[os.getenv('RECIPIENT_EMAIL')], body=body)
+        mail.send(msg)
         flash("E-mail enviado com sucesso!", "success")
 
     except Exception as e:
