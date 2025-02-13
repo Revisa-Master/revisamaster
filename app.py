@@ -1,25 +1,21 @@
 from flask import Flask, render_template, request, redirect, flash
 from flask_mail import Mail, Message
-import smtplib
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
 from dotenv import load_dotenv
 import os
 
 app = Flask(__name__)
 app.secret_key = 'uma_chave_super_secreta'
 load_dotenv(dotenv_path='.env')
-mail = Mail(app)
 
 # Carregar variáveis de ambiente
 app.config['MAIL_SERVER'] = os.getenv('EMAIL_HOST')
 app.config['MAIL_PORT'] = int(os.getenv('EMAIL_PORT'))
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USE_SSL'] = False
 app.config['MAIL_USERNAME'] = os.getenv('EMAIL_HOST_USER')
 app.config['MAIL_PASSWORD'] = os.getenv('EMAIL_HOST_PASSWORD')
 app.config['MAIL_DEFAULT_SENDER'] = os.getenv('EMAIL_HOST_USER')
 
+mail = Mail(app)
 
 # Rota para a página inicial
 @app.route('/')
