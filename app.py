@@ -71,8 +71,10 @@ def enviar_email():
         Mensagem:
         {mensagem}
         """
-        msg = Message(subject, sender=email, recipients=[os.getenv('RECIPIENT_EMAIL')], body=body)
-        mail.send(msg)
+        with mail.connect() as conn:
+            msg = Message(subject, sender=email, recipients=[os.getenv('RECIPIENT_EMAIL')], body=body)
+            conn.send(msg)
+
         flash("E-mail enviado com sucesso!", "success")
 
     except Exception as e:
