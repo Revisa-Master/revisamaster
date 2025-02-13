@@ -11,6 +11,7 @@ load_dotenv(dotenv_path='.env')
 app.config['MAIL_SERVER'] = os.getenv('EMAIL_HOST')
 app.config['MAIL_PORT'] = os.getenv('EMAIL_PORT')
 app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USE_SSL'] = False
 app.config['MAIL_USERNAME'] = os.getenv('EMAIL_HOST_USER')
 app.config['MAIL_PASSWORD'] = os.getenv('EMAIL_HOST_PASSWORD')
 app.config['MAIL_DEFAULT_SENDER'] = os.getenv('EMAIL_HOST_USER')
