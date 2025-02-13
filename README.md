@@ -4,7 +4,7 @@ Este projeto consiste no desenvolvimento de um site profissional para uma empres
 ## Funcionalidades Principais
 Apresentação Institucional: Seção dedicada à história, missão e valores da empresa, permitindo que os visitantes compreendam a essência e os objetivos da organização.
 
-## Serviços Oferecidos: Descrição detalhada dos serviços de revisão acadêmica disponíveis, incluindo tipos de documentos atendidos, prazos e metodologias utilizadas.
+### Serviços Oferecidos: Descrição detalhada dos serviços de revisão acadêmica disponíveis, incluindo tipos de documentos atendidos, prazos e metodologias utilizadas.
 
 Formulário de Contato Integrado ao SMTP: Um formulário de contato que permite aos clientes enviar mensagens diretamente pelo site. A integração com o protocolo SMTP garante que essas mensagens sejam entregues de forma segura e eficiente à equipe da empresa.
 
