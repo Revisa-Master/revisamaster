@@ -111,7 +111,7 @@ section {
 .section-content-1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 50px;
+  padding: 3rem;
 }
 
 .question-item1 {
@@ -133,9 +133,6 @@ section {
     grid-column: 1;
 }
 
-.question-item2 {
-  padding: 40px;
-}
 
 .button-section {
   text-align: center;

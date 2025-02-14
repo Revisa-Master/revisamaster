@@ -121,8 +121,9 @@ main {
 
 .hero-section-contact__img {
     position: absolute;
+    overflow: hidden;
     width: 100%;
-    height: 50vh;
+    height: 100%;
     opacity: 0.7;
 }
 
@@ -161,7 +162,6 @@ main {
     font-family: var(--font-main);
     color: var(--color-font);
     width: 50%;
-    gap: 1rem;
     align-items: start;
     gap: 1rem;
     padding: 2rem;
@@ -180,10 +180,9 @@ main {
 .section-content-contacto__form-container h2{
   font-size: 1.8rem;
   color: var(--color-font);
-  padding-top: 5rem;
   align-self: center;
   justify-self: center;
-
+  padding: 1rem 0;
 }
 
 .contact-form {
@@ -316,7 +315,9 @@ max-width: 50rem;
     .hero-section-contact__content h1 {
         font-size: 3rem;
     }
-
+    .section-content-contacto__container_inicial{
+        width: 70%;
+    }
     .section-content-contacto {
         padding: 2rem;
     }
@@ -335,16 +336,30 @@ max-width: 50rem;
     .contact-form__container-2 {
         width: 90vw;
     }
+
 }
 
 @media(max-width: 768px) {
   .section-content-contacto__container_inicial {
     width: 70%;
-  } 
+  }
+  
+  .hero-section-about__content h1{
+    font-size: 4.5rem;
+}
+
+.section-content-contacto__container_inicial{
+  width: 90%;
+}
 }
 
 @media(max-width: 480px) {
   .section-content-contacto__container_inicial {
     width: 100%;
+    padding: 0;
   }
+
+  .hero-section-about__content h1{
+    font-size: 3.5rem;
+}
 }
