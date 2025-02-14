@@ -86,77 +86,78 @@
         </div>
         
         <section class="section-content-contacto">
-        <div class="section-content-contacto__container_inicial">
-            <h1>
-                Fale connosco e peça o seu orçamento!
-            </h1>
-            <p>
-                Precisa de ajuda com o seu trabalho académico ou quer saber 
-                quanto custa a revisão do seu projeto? Estamos aqui para ajudar!
-            </p>
-            <p>
-                Preencha o formulário abaixo com as informações do seu trabalho, 
-                e a nossa equipa enviará um orçamento personalizado o mais rapidamente possível.
-            </p>
-            <p>
-            💡 <strong>Exemplo de descrição para o formulário:<br></strong>
-            "Olá, preciso de uma revisão linguística e formatação para a minha dissertação de mestrado em Psicologia. 
-            O documento tem cerca de 80 páginas e preciso da entrega em 7 dias. Podem enviar um orçamento?"
-            </p>
-            <p>
-            Se preferir, também pode entrar em contacto diretamente através de:
-            📩 E-mail: contacto@revisamaster.pt
-            </p>
-
-            <h2>
-                Formulário de contato:
-            </h2>
-
-        </div>
-        <form action="/enviar_email" method="POST">
-            <div class="contact-form">    
-                <div class="contact-form__container-1">    
-                    <p>Digite seu nome completo: </p>
-                    <input type="text" name="nome" placeholder="Nome ">  
-                </div>
-                <div class="contact-form__container-1">    
-                    <p>Digite seu e-mail: </p>
-                    <input type="email" name="email" placeholder="Email">
-                </div>
-                <div class="contact-form__container-1">
-                    <p>Qual é o número de páginas do seu documento ou trabalho? </p>
-                    <input type="number" name="paginas" placeholder="Número de páginas">
-                </div>
-                <div class="contact-form__container-1">
-                    <p>Qual é o prazo final de entrega? </p>
-                    <input type="date" name="prazo" placeholder="Prazo">
-                </div>
-                <div class="contact-form__container-2">
-                    <p>Selecione o serviço desejado:<br></p>
-                </div>
-                <div class="contact-form__container-checkbox">
-                        <label><input type="checkbox" name="servico" value="Apresentacoes"> Apresentações visuais</label><br>
-                        <label><input type="checkbox" name="servico" value="Formatacao"> Formatação e Revisão</label><br>
-                        <label><input type="checkbox" name="servico" value="melhoria-textual"> Melhoria textual</label><br>
-                </div>
-                <div class="contact-form__container-checkbox">
-                        <label><input type="checkbox" name="servico" value="traducao"> Tradução</label><br>
-                        <label><input type="checkbox" name="servico" value="correcao-plagio"> Correção de plágio</label><br>
-                        <label><input type="checkbox" name="servico" value="analise-textual"> Análise textual</label><br>
-                </div>
+            <div class="section-content-contacto__container_inicial">
+                <h1>
+                    Fale connosco e peça o seu orçamento!
+                </h1>
+                <p>
+                    Precisa de ajuda com o seu trabalho académico ou quer saber 
+                    quanto custa a revisão do seu projeto? Estamos aqui para ajudar!
+                </p>
+                <p>
+                    Preencha o formulário abaixo com as informações do seu trabalho, 
+                    e a nossa equipa enviará um orçamento personalizado o mais rapidamente possível.
+                </p>
+                <p>
+                💡 <strong>Exemplo de descrição para o formulário:<br></strong>
+                "Olá, preciso de uma revisão linguística e formatação para a minha dissertação de mestrado em Psicologia. 
+                O documento tem cerca de 80 páginas e preciso da entrega em 7 dias. Podem enviar um orçamento?"
+                </p>
+                <p>
+                Se preferir, também pode entrar em contacto diretamente através de:
+                📩 E-mail: contacto@revisamaster.pt
+                </p>
 
                 
-                <div class="contact-form__mensagem">
-                    <p>Digite sua mensagem: <br></p>
-                    <textarea name="mensagem" id="mensagem" cols="70" rows="10" placeholder="Mensagem"></textarea>
-                </div>
-                
-                <div class="contact-form__button">
-                    <button type="submit">Enviar</button>
-                </div>
             </div>
-        </form>
-    </section>
+            <div class="section-content-contacto__form-container">
+                <h2>
+                    Formulário de contato:
+                </h2>
+
+                <form action="/enviar_email" method="POST">
+                    <div class="contact-form">    
+                        <div class="contact-form__container-1">    
+                            <p>Digite seu nome completo: </p>
+                            <input type="text" name="nome" placeholder="Nome ">  
+                        </div>
+                        <div class="contact-form__container-1">    
+                            <p>Digite seu e-mail: </p>
+                            <input type="email" name="email" placeholder="Email">
+                        </div>
+                        <div class="contact-form__container-1">
+                            <p>Qual é o número de páginas do seu documento ou trabalho? </p>
+                            <input type="number" name="paginas" placeholder="Número de páginas">
+                        </div>
+                        <div class="contact-form__container-1">
+                            <p>Qual é o prazo final de entrega? </p>
+                            <input type="date" name="prazo" placeholder="Prazo">
+                        </div>
+                        <div class="contact-form__container-2">
+                            <p>Selecione o serviço desejado:<br></p>
+                        </div>
+                        <div class="contact-form__container-checkbox">
+                                <label><input type="checkbox" name="servico" value="Apresentacoes"> Apresentações visuais</label><br>
+                                <label><input type="checkbox" name="servico" value="Formatacao"> Formatação e Revisão</label><br>
+                                <label><input type="checkbox" name="servico" value="melhoria-textual"> Melhoria textual</label><br>
+                                <label><input type="checkbox" name="servico" value="traducao"> Tradução</label><br>
+                                <label><input type="checkbox" name="servico" value="correcao-plagio"> Correção de plágio</label><br>
+                                <label><input type="checkbox" name="servico" value="analise-textual"> Análise textual</label><br>
+                        </div>
+        
+                        
+                        <div class="contact-form__mensagem">
+                            <p>Digite sua mensagem: <br></p>
+                            <textarea name="mensagem" id="mensagem" cols="70" rows="10" placeholder="Mensagem"></textarea>
+                        </div>
+                        
+                        <div class="contact-form__button">
+                            <button type="submit">Enviar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
     </main>
 
     <footer>
