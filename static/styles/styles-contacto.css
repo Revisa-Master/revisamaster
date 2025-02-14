@@ -177,11 +177,12 @@ main {
 
 }
 
-.section-content-contacto__container_inicial h2{
+.section-content-contacto__form-container h2{
   font-size: 1.8rem;
   color: var(--color-font);
-  padding-top: 1rem;
+  padding-top: 5rem;
   align-self: center;
+  justify-self: center;
 
 }
 
@@ -195,7 +196,10 @@ main {
   background-color: var(--color-background);
 }
 
-input[type="text"], input[type="email"] {
+input[type="text"], 
+input[type="email"],
+input[type="date"], 
+input[type="number"] {
     width: 50rem;
     height: 2.5rem;
     font-family: var(--font-main);
@@ -209,17 +213,6 @@ input[type="text"], input[type="email"] {
 textarea {
     width: 50rem;
     height: 10rem;
-    font-family: var(--font-main);
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 2px;
-    opacity: 0.8;
-    padding: 0.25rem;
-}
-
-input[type="date"], input[type="number"]{
-    width: 15rem;
-    height: 2.5rem;
     font-family: var(--font-main);
     font-size: 1rem;
     border: 1px solid #ccc;
@@ -265,11 +258,13 @@ input[type="date"], input[type="number"]{
 
 .contact-form__container-checkbox{
 display: flex;
-flex-wrap: nowrap;
+flex-wrap: wrap;
+justify-content: center;
 font-size: 1rem;
 font-family: var(--font-main);
 color: var(--color-font);
 gap: 1rem;
+max-width: 50rem;
 
 }
 
@@ -326,18 +321,12 @@ gap: 1rem;
         padding: 2rem;
     }
 
-    .contact-form__container-checkbox{
-        display: flex;
-        flex-direction: column;
-        gap: 0rem;
-    }
-
     .contact-form {
         padding: 2rem;
-        align-items: center;
     }
 
-    input[type="text"], input[type="email"], 
+    input[type="text"], input[type="email"],
+    input[type="date"], input[type="number"], 
     textarea {
         
         width: 90vw;
@@ -346,6 +335,16 @@ gap: 1rem;
     .contact-form__container-2 {
         width: 90vw;
     }
+}
 
+@media(max-width: 768px) {
+  .section-content-contacto__container_inicial {
+    width: 70%;
+  } 
+}
 
+@media(max-width: 480px) {
+  .section-content-contacto__container_inicial {
+    width: 100%;
+  }
 }
